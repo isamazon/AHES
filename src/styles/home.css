@@ -1,0 +1,15 @@
+.landing-page-cnt {
+  position: relative;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #eef8fa;
+}
+
+.landing-page-cnt .flag-pic {
+  position: absolute;
+  height: 100%;
+  left: 0;
+}
+/*# sourceMappingURL=home.css.map */
