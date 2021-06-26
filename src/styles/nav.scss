@@ -13,25 +13,25 @@ $font3: "Pacifico", cursive;
   z-index: 500;
   width: 100%;
   left: 0;
-  background: #b08968;
+  background: #457b9d;
   display: flex;
   align-items: center;
   justify-content: center;
   .menu-link {
     position: absolute;
-    left: 20px;
-    color: #ede0d4;
+    right: 20px;
+    color: #a8dadc;
     z-index: 10;
     cursor: pointer;
     transition: 0.5s;
     &:hover {
-      color: #7f5539;
+      color: #1d3557;
     }
   }
   .homepagelink {
     position: relative;
-    color: #ede0d4;
-    font-family: $font2;
+    color: #a8dadc;
+    font-family: sans-serif;
     text-align: center;
     width: 200px;
     background-color: none;
@@ -52,7 +52,7 @@ $font3: "Pacifico", cursive;
     border: 2px solid #ede0d4;
     padding: 5px 30px;
     border-radius: 10px;
-    background: #7f5539;
+    background: #1d3557;
     transition: 0.5s;
     &:hover {
       text-decoration: none;
@@ -74,7 +74,7 @@ $font3: "Pacifico", cursive;
   justify-content: center;
   z-index: 600;
   height: 100vh;
-  background: #533826;
+  background: #457b9d;
   box-shadow: 5px 0px 100px black;
   animation: slidein 0.5s;
 
@@ -88,7 +88,7 @@ $font3: "Pacifico", cursive;
     color: #ede0d4;
     font-family: $font3;
     font-size: 60px;
-    border-bottom: 2px solid #ddb892;
+    border-bottom: 2px solid #e63946;
   }
   .close-btn {
     position: absolute;
@@ -102,7 +102,7 @@ $font3: "Pacifico", cursive;
     color: white;
   }
   .menu-link-1 {
-    color: #ddb892;
+    color: #a8dadc;
     font-size: 30px;
     height: 100px;
     display: flex;
@@ -111,7 +111,7 @@ $font3: "Pacifico", cursive;
     text-align: center;
     font-family: $font2;
     width: 100%;
-    background: #4b3322;
+    background: #407291;
     transition: 0.5s;
     &:hover {
       text-decoration: none;

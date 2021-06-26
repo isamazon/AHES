@@ -1,7 +1,7 @@
 import React, { useState, Component } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
-import "../styles/navbar.css";
+import "../styles/nav.css";
 
 function Nav() {
   const [click, setClick] = useState(false);
@@ -18,10 +18,7 @@ function Nav() {
           size="40px"
         />
         <Link to="/" className="homepagelink">
-          Blookify
-        </Link>
-        <Link to="/Login" className="loginlink">
-          Login
+          AHES
         </Link>
       </nav>
       <div className={click ? "side-menu-container" : "side-menu-closed"}>

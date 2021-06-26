@@ -8,7 +8,7 @@
   z-index: 500;
   width: 100%;
   left: 0;
-  background: #b08968;
+  background: #457b9d;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,8 +22,8 @@
 
 .nav-bar .menu-link {
   position: absolute;
-  left: 20px;
-  color: #ede0d4;
+  right: 20px;
+  color: #a8dadc;
   z-index: 10;
   cursor: pointer;
   -webkit-transition: 0.5s;
@@ -31,13 +31,13 @@
 }
 
 .nav-bar .menu-link:hover {
-  color: #7f5539;
+  color: #1d3557;
 }
 
 .nav-bar .homepagelink {
   position: relative;
-  color: #ede0d4;
-  font-family: "Lobster", cursive;
+  color: #a8dadc;
+  font-family: sans-serif;
   text-align: center;
   width: 200px;
   background-color: none;
@@ -61,7 +61,7 @@
   border: 2px solid #ede0d4;
   padding: 5px 30px;
   border-radius: 10px;
-  background: #7f5539;
+  background: #1d3557;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -93,7 +93,7 @@
           justify-content: center;
   z-index: 600;
   height: 100vh;
-  background: #533826;
+  background: #457b9d;
   -webkit-box-shadow: 5px 0px 100px black;
           box-shadow: 5px 0px 100px black;
   -webkit-animation: slidein 0.5s;
@@ -115,7 +115,7 @@
   color: #ede0d4;
   font-family: "Pacifico", cursive;
   font-size: 60px;
-  border-bottom: 2px solid #ddb892;
+  border-bottom: 2px solid #e63946;
 }
 
 .side-menu-container .close-btn,
@@ -133,7 +133,7 @@
 
 .side-menu-container .menu-link-1,
 .side-menu-closed .menu-link-1 {
-  color: #ddb892;
+  color: #a8dadc;
   font-size: 30px;
   height: 100px;
   display: -webkit-box;
@@ -148,7 +148,7 @@
   text-align: center;
   font-family: "Lobster", cursive;
   width: 100%;
-  background: #4b3322;
+  background: #407291;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
