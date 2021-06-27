@@ -34,20 +34,25 @@ $font3: "Ceviche One", cursive;
 
   .brand {
     position: absolute;
-    color: white;
+    color: black;
     font-size: 30px;
     font-weight: 700;
     padding-left: 80px;
     text-decoration: none;
     letter-spacing: 2px;
     transition: 0.5s;
-    font-family: $font3;
+    font-family: sans-serif;
     z-index: 1;
     &:hover {
       color: white;
       text-decoration: none;
       transform: translateY(-5px);
     }
+  }
+  .logo-img {
+    position: relative;
+    height: 150px;
+    width: 150px;
   }
 }
 nav.active {
@@ -66,7 +71,7 @@ nav.active {
   list-style: none;
   text-align: center;
   background: none;
-  width: 100%;
+  width: 795px;
   right: 0;
   top: 0;
   justify-content: center;
@@ -114,16 +119,16 @@ nav.active {
 }
 
 .nav-links {
-  color: white;
-  font-family: $font2;
+  color: black;
+  font-family: sans-serif;
   letter-spacing: 2px;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 5px 20px;
   transition: 0.5s;
   &:hover {
-    color: white;
+    border-top: 3px solid #308bd7;
     text-decoration: none;
-    transform: translateY(-5px);
+    color: none;
   }
 }
 

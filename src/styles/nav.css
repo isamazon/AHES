@@ -36,7 +36,7 @@
 
 .nav .brand {
   position: absolute;
-  color: white;
+  color: black;
   font-size: 30px;
   font-weight: 700;
   padding-left: 80px;
@@ -44,7 +44,7 @@
   letter-spacing: 2px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  font-family: "Ceviche One", cursive;
+  font-family: sans-serif;
   z-index: 1;
 }
 
@@ -53,6 +53,12 @@
   text-decoration: none;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
+}
+
+.nav .logo-img {
+  position: relative;
+  height: 150px;
+  width: 150px;
 }
 
 nav.active {
@@ -72,7 +78,7 @@ nav.active {
   list-style: none;
   text-align: center;
   background: none;
-  width: 100%;
+  width: 795px;
   right: 0;
   top: 0;
   -webkit-box-pack: center;
@@ -142,20 +148,19 @@ nav.active {
 }
 
 .nav-links {
-  color: white;
-  font-family: "Fjalla One", sans-serif;
+  color: black;
+  font-family: sans-serif;
   letter-spacing: 2px;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 5px 20px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .nav-links:hover {
-  color: white;
+  border-top: 3px solid #308bd7;
   text-decoration: none;
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  color: none;
 }
 
 .nav-links:hover {

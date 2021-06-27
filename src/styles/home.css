@@ -4,12 +4,23 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #eef8fa;
+  background: #f5f5f5;
 }
 
-.landing-page-cnt .video1 {
+.landing-page-cnt .landingpage-bg {
   position: absolute;
+  top: 0;
+  right: 0;
   height: 100%;
-  left: 0;
+  width: 100%;
+  background: url("../assets/landingpage.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.landing-page-cnt .landingpage-bg .row-1 {
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 /*# sourceMappingURL=home.css.map */

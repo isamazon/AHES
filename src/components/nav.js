@@ -6,7 +6,8 @@ import { BiLogIn } from "react-icons/bi";
 
 // CSS
 import "../styles/nav.css";
-
+// images
+import logo from "../assets/logo.png";
 function Nav() {
   const [click, setClick] = useState(false);
 
@@ -28,7 +29,7 @@ function Nav() {
   return (
     <nav className={nav ? "nav active" : "nav"}>
       <Link to="/" className="brand">
-        AHES
+        <img src={logo} className="logo-img" alt="" />
       </Link>
       <div className="menu-icon" onClick={handleClick}>
         <i className={click ? "fas fa-times" : "fas fa-bars"} />
@@ -47,7 +48,7 @@ function Nav() {
             className="nav-links"
             onClick={closeMobileMenu}
           >
-            Male Shounen
+            About
           </Link>
         </li>
         {/* Dropdown 2 */}
@@ -57,17 +58,17 @@ function Nav() {
             className="nav-links"
             onClick={closeMobileMenu}
           >
-            Female Shounen
+            Services
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+            Gallery
           </Link>
         </li>
         <li className="nav-item">
           <Link to="/" className="nav-links" onClick={closeMobileMenu}>
             Contact
-          </Link>
-        </li>
-        <li className="nav-signin">
-          <Link to="/login" className="signinlink">
-            Sign in <BiLogIn className="icon" size="30px" />
           </Link>
         </li>
       </ul>
