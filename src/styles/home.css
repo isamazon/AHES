@@ -1,26 +1,173 @@
 .landing-page-cnt {
   position: relative;
   height: 100vh;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #f5f5f5;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: whitesmoke;
 }
 
 .landing-page-cnt .landingpage-bg {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0%;
+  left: 0%;
   height: 100%;
   width: 100%;
-  background: url("../assets/landingpage.png");
+  background: url("../assets/landingpagefinish1.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-size: auto;
+  background-position: bottom;
 }
 
-.landing-page-cnt .landingpage-bg .row-1 {
+@media screen and (max-width: 1300px) {
+  .landing-page-cnt .landingpage-bg {
+    background: url("../assets/landingpagemedium.png");
+  }
+}
+
+.landing-page-cnt .row-1 {
   position: relative;
   height: 100%;
   width: 100%;
+  top: 0%;
+  background: none;
+}
+
+.landing-page-cnt .row-1 .col-1 {
+  position: relative;
+  background: none;
+}
+
+.landing-page-cnt .row-1 .col-1 .welcome-h1 {
+  position: relative;
+  left: 20%;
+  top: 20%;
+  font-size: 50px;
+  font-weight: 700;
+  width: 80%;
+  padding: 0px 0px;
+  background: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .landing-page-cnt .row-1 .col-1 .welcome-h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    left: 0%;
+    font-size: 40px;
+    padding: 0px 50px;
+    text-align: center;
+  }
+}
+
+.landing-page-cnt .row-1 .col-1 .link-container {
+  position: relative;
+  top: 20%;
+  left: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 50px 0px;
+}
+
+.landing-page-cnt .row-1 .col-1 .link-container .link-1 {
+  position: relative;
+  margin-right: 20px;
+}
+
+.landing-page-cnt .row-1 .col-1 .link-container .link-1 .button-1 {
+  background: #d43a57;
+  border: 0px solid black;
+  border-radius: 20px;
+  padding: 10px 40px;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.432);
+          box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.432);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.landing-page-cnt .row-1 .col-1 .link-container .link-1 .button-1:hover {
+  background: #0da0f2;
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+  -webkit-box-shadow: 0px 20px 5px rgba(0, 0, 0, 0.384);
+          box-shadow: 0px 20px 5px rgba(0, 0, 0, 0.384);
+}
+
+.landing-page-cnt .row-1 .col-1 .link-container .link-1 .about-btn {
+  background: #0da0f2;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.landing-page-cnt .row-1 .col-1 .link-container .link-1 .about-btn:hover {
+  background: #d43a57;
+}
+
+.landing-page-cnt .row-1 .col-2 {
+  position: relative;
+}
+
+.about-section {
+  position: relative;
+  height: 100vh;
+  background: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about-section .topwave {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background: url("../assets/topwave.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top;
+}
+
+.about-section .about-row {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about-section .about-row .info-col {
+  position: relative;
+  height: 500px;
+  background: blue;
 }
 /*# sourceMappingURL=home.css.map */

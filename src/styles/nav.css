@@ -30,7 +30,7 @@
 
 @media screen and (max-width: 1000px) {
   .nav {
-    background: black;
+    background-color: #a3c7ef;
   }
 }
 
@@ -62,7 +62,7 @@
 }
 
 nav.active {
-  background-color: black;
+  background-color: #0f9ef0;
 }
 
 .fa-firstdraft {
@@ -158,9 +158,10 @@ nav.active {
 }
 
 .nav-links:hover {
-  border-top: 3px solid #308bd7;
   text-decoration: none;
-  color: none;
+  color: black;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 .nav-links:hover {
@@ -286,16 +287,16 @@ nav.active {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: whitesmoke;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #0f9ef0;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #dd1a22;
 }
 /*# sourceMappingURL=nav.css.map */

@@ -1,21 +1,126 @@
 .landing-page-cnt {
   position: relative;
   height: 100vh;
+  width: 100%;
   display: flex;
-  background: #f5f5f5;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: whitesmoke;
   .landingpage-bg {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 0%;
+    left: 0%;
     height: 100%;
     width: 100%;
-    background: url("../assets/landingpage.png");
+    background: url("../assets/landingpagefinish1.png");
     background-repeat: no-repeat;
-    background-position: center;
-    .row-1 {
+    background-size: auto;
+    background-position: bottom;
+
+    @media screen and (max-width: 1300px) {
+      background: url("../assets/landingpagemedium.png");
+    }
+  }
+  .row-1 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    background: none;
+    .col-1 {
       position: relative;
-      height: 100%;
-      width: 100%;
+      background: none;
+
+      .welcome-h1 {
+        position: relative;
+        left: 20%;
+        top: 20%;
+        font-size: 50px;
+        font-weight: 700;
+        width: 80%;
+        padding: 0px 0px;
+        background: none;
+        @media screen and (max-width: 1200px) {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          left: 0%;
+          font-size: 40px;
+          padding: 0px 50px;
+          text-align: center;
+        }
+      }
+      .link-container {
+        position: relative;
+        top: 20%;
+        left: 20%;
+        display: flex;
+        flex-direction: row;
+        padding: 50px 0px;
+        .link-1 {
+          position: relative;
+          margin-right: 20px;
+          .button-1 {
+            background: #d43a57;
+            border: 0px solid black;
+            border-radius: 20px;
+            padding: 10px 40px;
+            color: white;
+            transition: 0.5s;
+            box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.432);
+            text-transform: uppercase;
+            font-weight: 500;
+            &:hover {
+              background: #0da0f2;
+              transform: translateY(-15px);
+              box-shadow: 0px 20px 5px rgba(0, 0, 0, 0.384);
+            }
+          }
+          .about-btn {
+            background: #0da0f2;
+            transition: 0.5s;
+            &:hover {
+              background: #d43a57;
+            }
+          }
+        }
+      }
+    }
+    .col-2 {
+      position: relative;
+    }
+  }
+}
+
+// Second part of landing page
+.about-section {
+  position: relative;
+  height: 100vh;
+  background: whitesmoke;
+  display: flex;
+  justify-content: center;
+  .topwave {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background: url("../assets/topwave.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top;
+  }
+  .about-row {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: none;
+    display: flex;
+    .info-col {
+      position: relative;
+      height: 500px;
+      background: blue;
     }
   }
 }
