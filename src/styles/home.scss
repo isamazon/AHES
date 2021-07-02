@@ -96,7 +96,7 @@
 // Second part of landing page
 .about-section {
   position: relative;
-  height: 100vh;
+  height: 100%;
   background: whitesmoke;
   display: flex;
   justify-content: center;
@@ -115,12 +115,59 @@
     position: relative;
     height: 100%;
     width: 100%;
+    padding-top: 200px;
     background: none;
     display: flex;
+    justify-content: center;
     .info-col {
       position: relative;
-      height: 500px;
-      background: blue;
+      height: 100%;
+      width: 100%;
+      top: 15%;
+      margin-bottom: 100px;
+      background: none;
+      display: flex;
+      justify-content: center;
+      .inner-col {
+        position: relative;
+        height: 400px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: whitesmoke;
+        box-shadow: 0px -20px 20px rgba(0, 0, 0, 0.192);
+        border-radius: 10px;
+        transition: 0.5s;
+        &:hover {
+          box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.192);
+        }
+        .col-img {
+          position: absolute;
+          height: 250px;
+          top: -30%;
+          transition: 0.5s;
+          &:hover {
+            transform: translateY(-15px);
+          }
+        }
+        .info-h3 {
+          position: relative;
+          top: 35%;
+          text-transform: uppercase;
+          font-weight: 900;
+          color: black;
+        }
+        .info-p {
+          position: relative;
+          top: 40%;
+          text-align: center;
+          color: black;
+          font-weight: 600;
+          font-size: 20px;
+          padding: 0px 10px;
+        }
+      }
     }
   }
 }

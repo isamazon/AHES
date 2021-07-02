@@ -133,7 +133,7 @@
 
 .about-section {
   position: relative;
-  height: 100vh;
+  height: 100%;
   background: whitesmoke;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,15 +159,86 @@
   position: relative;
   height: 100%;
   width: 100%;
+  padding-top: 200px;
   background: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .about-section .about-row .info-col {
   position: relative;
-  height: 500px;
-  background: blue;
+  height: 100%;
+  width: 100%;
+  top: 15%;
+  margin-bottom: 100px;
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about-section .about-row .info-col .inner-col {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: whitesmoke;
+  -webkit-box-shadow: 0px -20px 20px rgba(0, 0, 0, 0.192);
+          box-shadow: 0px -20px 20px rgba(0, 0, 0, 0.192);
+  border-radius: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.about-section .about-row .info-col .inner-col:hover {
+  -webkit-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.192);
+          box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.192);
+}
+
+.about-section .about-row .info-col .inner-col .col-img {
+  position: absolute;
+  height: 250px;
+  top: -30%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.about-section .about-row .info-col .inner-col .col-img:hover {
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+
+.about-section .about-row .info-col .inner-col .info-h3 {
+  position: relative;
+  top: 35%;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: black;
+}
+
+.about-section .about-row .info-col .inner-col .info-p {
+  position: relative;
+  top: 40%;
+  text-align: center;
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 0px 10px;
 }
 /*# sourceMappingURL=home.css.map */
