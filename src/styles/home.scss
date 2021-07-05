@@ -7,38 +7,49 @@
   justify-content: center;
   align-items: center;
   background: whitesmoke;
+  overflow-x: hidden;
+
   .landingpage-bg {
     position: absolute;
-    top: 0%;
-    left: 0%;
+    right: 0;
     height: 100%;
     width: 100%;
     background: url("../assets/landingpagefinish1.png");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     background-position: bottom;
-
+    z-index: 1;
     @media screen and (max-width: 1300px) {
       background: url("../assets/landingpagemedium.png");
     }
   }
+  .star {
+    position: absolute;
+    right: 10%;
+    top: 5%;
+    height: 100px;
+    z-index: 2;
+    animation: left 2s infinite linear;
+  }
+
   .row-1 {
     position: relative;
     height: 100%;
     width: 100%;
     top: 0%;
     background: none;
+    z-index: 3;
     .col-1 {
       position: relative;
       background: none;
 
       .welcome-h1 {
         position: relative;
-        left: 20%;
+        left: 15%;
         top: 20%;
-        font-size: 50px;
+        font-size: 60px;
         font-weight: 700;
-        width: 80%;
+        width: 90%;
         padding: 0px 0px;
         background: none;
         @media screen and (max-width: 1200px) {
@@ -54,7 +65,7 @@
       .link-container {
         position: relative;
         top: 20%;
-        left: 20%;
+        left: 15%;
         display: flex;
         flex-direction: row;
         padding: 50px 0px;
@@ -99,7 +110,9 @@
   height: 100%;
   background: whitesmoke;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+
   .topwave {
     position: absolute;
     top: 0%;
@@ -108,14 +121,14 @@
     width: 100%;
     background: url("../assets/topwave.png");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: contain;
     background-position: top;
   }
   .about-row {
     position: relative;
     height: 100%;
     width: 100%;
-    padding-top: 200px;
+    padding-top: 250px;
     background: none;
     display: flex;
     justify-content: center;
@@ -123,14 +136,13 @@
       position: relative;
       height: 100%;
       width: 100%;
-      top: 15%;
       margin-bottom: 100px;
       background: none;
       display: flex;
       justify-content: center;
       .inner-col {
         position: relative;
-        height: 400px;
+        height: 450px;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -169,5 +181,192 @@
         }
       }
     }
+  }
+  .mailing-row {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    .stars,
+    .star2,
+    .star3,
+    .star4,
+    .star5,
+    .star6 {
+      position: absolute;
+      height: 150px;
+      width: 150px;
+    }
+    .stars {
+      top: 16%;
+      animation: left2right 7s infinite linear;
+    }
+    .star2 {
+      top: 65%;
+      animation: left2right 8s infinite linear;
+    }
+    .star3 {
+      top: 25%;
+      animation: left2right 6s infinite linear;
+    }
+    .star4 {
+      top: 5%;
+      animation: left2right 10s infinite linear;
+    }
+    .star5 {
+      top: 55%;
+      animation: left2right 5s infinite linear;
+    }
+    .star6 {
+      top: 75%;
+      animation: left2right 7.4s infinite linear;
+    }
+    .info-mail {
+      position: relative;
+      height: 600px;
+      background: none;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      .newsletter-h1 {
+        color: #d43a57;
+        text-transform: uppercase;
+        font-weight: 900;
+        text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.171);
+        font-size: 50px;
+      }
+      .newsletter-p {
+        color: #0da0f2;
+        font-size: 20px;
+        padding: 20px 20px;
+      }
+      .subscribe-form {
+        position: relative;
+        height: 100px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        background: none;
+        .subscribe-email {
+          position: relative;
+          width: 60%;
+          margin-right: 20px;
+          height: 50px;
+          background: none;
+          color: #d43a57;
+          text-transform: uppercase;
+          font-weight: 900;
+          padding-left: 20px;
+          border: 4px solid black;
+          border-radius: 10px;
+          &::placeholder {
+            color: #d43a57;
+          }
+          &:focus {
+            border: 4px solid #0da0f2;
+            outline: none;
+          }
+        }
+        .submit-button {
+          position: relative;
+          width: 20%;
+          height: 50px;
+          background: none;
+          border: 4px solid black;
+          border-radius: 10px;
+          color: #0da0f2;
+          font-weight: 900;
+          font-size: 20px;
+          text-transform: uppercase;
+          transition: 0.5s;
+          &:hover {
+            background: #0da0f2;
+            color: #d43a57;
+            border: 2px solid #0da0f2;
+          }
+        }
+      }
+    }
+    .subscribe-col {
+      position: relative;
+      height: 700px;
+      background: none;
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+}
+#bluestar,
+#star,
+#redstar {
+  animation: left 3s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#circle {
+  animation: tilt 5s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#letter {
+  animation: down2up 10s infinite ease-in-out;
+}
+@keyframes down2up {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-60px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes spinleft {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes left {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes left2right {
+  0% {
+    left: -300px;
+  }
+  100% {
+    left: 2500px;
   }
 }

@@ -1,11 +1,16 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import aos from "aos";
 // images
 import money from "../assets/money2.png";
 import question from "../assets/question2.png";
 import help from "../assets/help2.png";
 import ad from "../assets/ad.jpg.png";
+import Letter from "./SVGS/letter";
+import Star from "./SVGS/star";
+import Redstar from "./SVGS/redstar";
+import Bluestar from "./SVGS/bluestar";
 function landing2() {
   return (
     <Container fluid className="about-section">
@@ -54,6 +59,47 @@ function landing2() {
               jewelry, fine art, antiques, will be appraised.
             </p>
           </div>
+        </Col>
+      </Row>
+      <Row className="mailing-row">
+        <div className="stars">
+          <Star height="85px" />
+        </div>
+        <div className="star2" id="star2">
+          <Redstar height="85px" />
+        </div>
+        <div className="star3" id="star2">
+          <Bluestar height="85px" />
+        </div>
+        <div className="star4" id="star2">
+          <Redstar height="85px" />
+        </div>
+        <div className="star5" id="star2">
+          <Star height="85px" />
+        </div>
+        <div className="star6" id="star2">
+          <Bluestar height="85px" />
+        </div>
+        <Col xl={6} md={12} className="info-mail">
+          <h1 className="newsletter-h1">Subscribe to our newsletter!</h1>
+          <p className="newsletter-p">
+            Get an advantage by subscribing to our newsletter to get weekly
+            updates on whats up for sale!
+          </p>
+          <form className="subscribe-form">
+            <input
+              className="subscribe-email"
+              name="email"
+              placeholder="Enter your email here"
+              type="email"
+            />
+            <button className="submit-button" type="submit">
+              Submit
+            </button>
+          </form>
+        </Col>
+        <Col xl={6} md={12} className="subscribe-col">
+          <Letter width="80%" />
         </Col>
       </Row>
     </Container>

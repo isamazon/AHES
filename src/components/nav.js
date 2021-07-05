@@ -42,7 +42,7 @@ function Nav() {
         </li>
 
         {/* Dropdown 1 */}
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <Link
             to="/Maleshounen"
             className="nav-links"
@@ -50,7 +50,7 @@ function Nav() {
           >
             About
           </Link>
-        </li>
+        </li> */}
         {/* Dropdown 2 */}
         <li className="nav-item">
           <Link
@@ -63,7 +63,7 @@ function Nav() {
         </li>
         <li className="nav-item">
           <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-            Gallery
+            Upcoming Sales
           </Link>
         </li>
         <li className="nav-item">
