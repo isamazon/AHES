@@ -86,38 +86,6 @@ nav.active {
   background: none;
 }
 
-.nav-signin {
-  position: absolute;
-  right: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid white;
-  height: 30px;
-  padding: 20px;
-  width: 150px;
-  transition: 0.5s;
-  &:hover {
-    background: white;
-    transform: translateY(-5px);
-  }
-  @media screen and (max-width: 1000px) {
-    position: relative;
-  }
-}
-.signinlink {
-  position: absolute;
-  width: 100%;
-  background: none;
-  color: white;
-  font-family: $font1;
-  font-size: 30px;
-  &:hover {
-    text-decoration: none;
-    color: black;
-  }
-}
-
 .nav-links {
   color: black;
   font-family: sans-serif;
@@ -149,10 +117,10 @@ nav.active {
 }
 
 .fa-times {
-  color: white;
+  color: black;
 }
 .fa-bars {
-  color: white;
+  color: black;
 }
 
 @media screen and (max-width: 1000px) {
@@ -174,7 +142,7 @@ nav.active {
   }
 
   .nav-menu.active {
-    background: black;
+    background: whitesmoke;
     left: 0;
     display: flex;
     align-items: center;
@@ -214,7 +182,7 @@ nav.active {
   }
 
   .fa-times {
-    color: #fff;
+    color: black;
     font-size: 2rem;
   }
 

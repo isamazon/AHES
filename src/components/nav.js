@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // Dependencies
 import { Link } from "react-router-dom";
-import { FaTimes } from "react-icons/fa";
+import { BiLogIn } from "react-icons/bi";
 import { AiOutlineMenu } from "react-icons/ai";
 // Components
 
@@ -33,7 +33,7 @@ function Nav() {
         <img src={logo} className="logo-img" alt="" />
       </Link>
       <div className="menu-icon" onClick={handleClick}>
-        <i className={click ? FaTimes : AiOutlineMenu} />
+        <i className={click ? "fas fa-times" : "fas fa-bars"} />
       </div>
       <ul className={click ? "nav-menu active" : "nav-menu"}>
         <li className="nav-item">

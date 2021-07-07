@@ -103,52 +103,6 @@ nav.active {
   background: none;
 }
 
-.nav-signin {
-  position: absolute;
-  right: 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 2px solid white;
-  height: 30px;
-  padding: 20px;
-  width: 150px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.nav-signin:hover {
-  background: white;
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-}
-
-@media screen and (max-width: 1000px) {
-  .nav-signin {
-    position: relative;
-  }
-}
-
-.signinlink {
-  position: absolute;
-  width: 100%;
-  background: none;
-  color: white;
-  font-family: "Bangers", cursive;
-  font-size: 30px;
-}
-
-.signinlink:hover {
-  text-decoration: none;
-  color: black;
-}
-
 .nav-links {
   color: black;
   font-family: sans-serif;
@@ -184,11 +138,11 @@ nav.active {
 }
 
 .fa-times {
-  color: white;
+  color: black;
 }
 
 .fa-bars {
-  color: white;
+  color: black;
 }
 
 @media screen and (max-width: 1000px) {
@@ -216,7 +170,7 @@ nav.active {
     transition: all 0.5s ease;
   }
   .nav-menu.active {
-    background: black;
+    background: whitesmoke;
     left: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -258,7 +212,7 @@ nav.active {
     cursor: pointer;
   }
   .fa-times {
-    color: #fff;
+    color: black;
     font-size: 2rem;
   }
   .nav-links-mobile {
