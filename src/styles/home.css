@@ -34,6 +34,7 @@
 @media screen and (max-width: 1300px) {
   .landing-page-cnt .landingpage-bg {
     background: url("../assets/landingpagemedium.png");
+    background-position: center;
   }
 }
 
@@ -53,12 +54,19 @@
   width: 100%;
   top: 0%;
   background: none;
-  z-index: 3;
+  z-index: 1;
 }
 
 .landing-page-cnt .row-1 .col-1 {
   position: relative;
   background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .landing-page-cnt .row-1 .col-1 .welcome-h1 {
@@ -82,7 +90,7 @@
             justify-content: center;
     width: 100%;
     left: 0%;
-    font-size: 40px;
+    font-size: 45px;
     padding: 0px 50px;
     text-align: center;
   }
@@ -100,6 +108,18 @@
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 50px 0px;
+}
+
+@media screen and (max-width: 1200px) {
+  .landing-page-cnt .row-1 .col-1 .link-container {
+    padding: 0px 0px;
+    left: 0%;
+    top: 25%;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .landing-page-cnt .row-1 .col-1 .link-container .link-1 {
@@ -133,6 +153,12 @@
   background: #0da0f2;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+@media screen and (max-width: 1200px) {
+  .landing-page-cnt .row-1 .col-1 .link-container .link-1 .about-btn {
+    width: 213px;
+  }
 }
 
 .landing-page-cnt .row-1 .col-1 .link-container .link-1 .about-btn:hover {

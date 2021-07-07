@@ -8,7 +8,7 @@ function Landingpage() {
     <Container fluid className="landing-page-cnt">
       <div className="landingpage-bg"></div>
       <Row className="row-1">
-        <Col xl={7} md={12} className="col-1">
+        <Col xl={7} md={12} sm={12} className="col-1">
           <h1 className="welcome-h1">
             Welcome, to American Household Estate Sales
           </h1>

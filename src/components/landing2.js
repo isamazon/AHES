@@ -1,7 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import aos from "aos";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Infobox from "./infobox";
 // images
 import money from "../assets/money2.png";
 import question from "../assets/question2.png";
@@ -11,55 +13,43 @@ import Letter from "./SVGS/letter";
 import Star from "./SVGS/star";
 import Redstar from "./SVGS/redstar";
 import Bluestar from "./SVGS/bluestar";
-function landing2() {
+function Landing2() {
   return (
     <Container fluid className="about-section">
       <div className="topwave"></div>
       <Row className="about-row">
-        <Col xl={3} lg={2} className="info-col">
-          <div className="inner-col">
-            <img src={question} alt="" className="col-img" />
-            <h3 className="info-h3">Who we are</h3>
-            <p className="info-p">
-              American Household Estate Sales , a professional estate sale
-              company, serving Albuquerque, Rio Rancho, and surrounding area.
-              17+ years in business,
-            </p>
-          </div>
-        </Col>
-        <Col xl={3} lg={2} className="info-col">
-          <div className="inner-col">
-            <img src={money} alt="" className="col-img" />
-            <h3 className="info-h3">Consultation</h3>
-            <p className="info-p">
-              Initial consultation is free. We are paid a percentage of the
-              gross income of the sale. There are no up-front costs to you.
-            </p>
-          </div>
-        </Col>
-        <Col xl={3} lg={2} className="info-col">
-          <div className="inner-col">
-            <img src={help} alt="" className="col-img" />
-            <h3 className="info-h3">We help</h3>
-            <p className="info-p">
-              American Household Estate Sales , a professional estate sale
-              company, serving Albuquerque, Rio Rancho, and surrounding area.
-              17+ years in business,
-            </p>
-          </div>
-        </Col>
-        <Col xl={3} lg={2} className="info-col">
-          <div className="inner-col">
-            <img src={ad} alt="" className="col-img" />
-            <h3 className="info-h3">advertising</h3>
-            <p className="info-p">
-              We advertise on line and also have an extensive email and mailing
-              list, as well as advertising the sale on our website. We sell
-              everything from household items , vehicles, etc, items such as
-              jewelry, fine art, antiques, will be appraised.
-            </p>
-          </div>
-        </Col>
+        <Infobox
+          img={question}
+          animation="fade-up"
+          title="Who we are"
+          infoText="American Household Estate Sales , a professional estate sale company,
+          serving Albuquerque, Rio Rancho, and surrounding area. 17+ years in
+          business,"
+        />
+        <Infobox
+          img={money}
+          animation="fade-down"
+          title="Consulation"
+          infoText="Initial consultation is free. We are paid a percentage of the
+        gross income of the sale. There are no up-front costs to you."
+        />
+        <Infobox
+          img={help}
+          animation="fade-up"
+          title="We help"
+          infoText="American Household Estate Sales , a professional estate sale
+        company, serving Albuquerque, Rio Rancho, and surrounding area.
+        17+ years in business,"
+        />
+        <Infobox
+          img={ad}
+          animation="fade-down"
+          title="Advertising"
+          infoText="We advertise on line and also have an extensive email and mailing
+      list, as well as advertising the sale on our website. We sell
+      everything from household items , vehicles, etc, items such as
+      jewelry, fine art, antiques, will be appraised."
+        />
       </Row>
       <Row className="mailing-row">
         <div className="stars">
@@ -106,4 +96,4 @@ function landing2() {
   );
 }
 
-export default landing2;
+export default Landing2;

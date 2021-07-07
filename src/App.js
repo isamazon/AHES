@@ -4,7 +4,7 @@ import "./App.css";
 // Main pages
 
 import Home from "./Home";
-
+import Sales from "./Sales";
 const FourOhFour = () => {
   const { pathname } = useLocation();
 
@@ -19,6 +19,7 @@ function App() {
     <div className="app">
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/Sales" component={Sales} />
         <Route path="*">
           <FourOhFour />
         </Route>

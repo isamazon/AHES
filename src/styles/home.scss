@@ -21,6 +21,7 @@
     z-index: 1;
     @media screen and (max-width: 1300px) {
       background: url("../assets/landingpagemedium.png");
+      background-position: center;
     }
   }
   .star {
@@ -38,10 +39,12 @@
     width: 100%;
     top: 0%;
     background: none;
-    z-index: 3;
+    z-index: 1;
     .col-1 {
       position: relative;
       background: none;
+      display: flex;
+      flex-direction: column;
 
       .welcome-h1 {
         position: relative;
@@ -57,7 +60,7 @@
           justify-content: center;
           width: 100%;
           left: 0%;
-          font-size: 40px;
+          font-size: 45px;
           padding: 0px 50px;
           text-align: center;
         }
@@ -69,9 +72,18 @@
         display: flex;
         flex-direction: row;
         padding: 50px 0px;
+        @media screen and (max-width: 1200px) {
+          padding: 0px 0px;
+          left: 0%;
+          top: 25%;
+          width: 100%;
+          justify-content: center;
+        }
         .link-1 {
           position: relative;
           margin-right: 20px;
+          @media screen and (max-width: 1200px) {
+          }
           .button-1 {
             background: #d43a57;
             border: 0px solid black;
@@ -91,6 +103,9 @@
           .about-btn {
             background: #0da0f2;
             transition: 0.5s;
+            @media screen and (max-width: 1200px) {
+              width: 213px;
+            }
             &:hover {
               background: #d43a57;
             }

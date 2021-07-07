@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 // Dependencies
 import { Link } from "react-router-dom";
-import { BiLogIn } from "react-icons/bi";
+import { FaTimes } from "react-icons/fa";
+import { AiOutlineMenu } from "react-icons/ai";
 // Components
 
 // CSS
@@ -32,7 +33,7 @@ function Nav() {
         <img src={logo} className="logo-img" alt="" />
       </Link>
       <div className="menu-icon" onClick={handleClick}>
-        <i className={click ? "fas fa-times" : "fas fa-bars"} />
+        <i className={click ? FaTimes : AiOutlineMenu} />
       </div>
       <ul className={click ? "nav-menu active" : "nav-menu"}>
         <li className="nav-item">
@@ -62,7 +63,7 @@ function Nav() {
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+          <Link to="/Sales" className="nav-links" onClick={closeMobileMenu}>
             Upcoming Sales
           </Link>
         </li>
