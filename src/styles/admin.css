@@ -1,0 +1,90 @@
+.admin-container {
+  position: relative;
+  height: 100vh;
+  background: #455075;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.admin-container .row-1 {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding-top: 100px;
+  background: none;
+}
+
+.admin-container .row-1 .textbox-col {
+  position: relative;
+  height: 600px;
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.admin-container .row-1 .textbox-col .desc-h1 {
+  color: white;
+}
+
+.admin-container .row-1 .textbox-col form {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.admin-container .row-1 .textbox-col form .input-box {
+  position: relative;
+  width: 600px;
+  height: 200px;
+  margin-bottom: 20px;
+  background: #354060;
+  border: 3px solid #252c42;
+  border-radius: 20px;
+  text-align: top;
+}
+
+.admin-container .row-1 .textbox-col form .submit-btn {
+  position: relative;
+  width: 150px;
+  height: 50px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background: none;
+  border: 5px solid #252c42;
+  color: white;
+  text-transform: uppercase;
+}
+
+.admin-container .row-1 .description-p {
+  position: relative;
+  font-size: 40px;
+  text-align: center;
+  height: 100px;
+  width: 600px;
+  background: none;
+  border: 2px solid black;
+}
+/*# sourceMappingURL=admin.css.map */

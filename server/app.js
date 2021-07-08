@@ -86,21 +86,29 @@ app.get("/api/file/:file", (req, res) => {
 app.put("/api/file", (req, res) => {
   let { title, base64 } = req.body;
 
-  let newTitle = title.split(".")[0];
+  console.log(title);
 
-  if (fs.existsSync(directoryPath + newTitle + ".png")) {
-    newTitle = `${newTitle}_${Math.floor(Math.random() * 100)}.png`;
+  let newTitle = title.split(".");
+
+  if (fs.existsSync(directoryPath + newTitle[0] + "." + newTitle[1])) {
+    newTitle = `${newTitle[0]}_${Math.floor(Math.random() * 100)}.${
+      newTitle[1]
+    }`;
   } else {
-    newTitle = `${newTitle}.png`;
+    newTitle = `${newTitle[0]}.${newTitle[1]}`;
   }
 
   if (is_(base64)) {
     fs.writeFile(directoryPath + newTitle, base64, "base64", (err) => {
-      if (err)
+      if (err) {
+        console.log("something fucked up you jerg askdijsiofjasf");
         return res.json({ status: "failure... oniiichan messed up >///<" });
+      }
+      console.log("owo it is a base64");
       res.json({ status: "success... owo" });
     });
   } else {
+    console.log("not base64 uwu");
     res.json({ status: "senpai it's not a base64 image." });
   }
 });

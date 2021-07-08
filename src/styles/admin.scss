@@ -1,0 +1,61 @@
+.admin-container {
+  position: relative;
+  height: 100vh;
+  background: #455075;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .row-1 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding-top: 100px;
+    background: none;
+    .textbox-col {
+      position: relative;
+      height: 600px;
+      background: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .desc-h1 {
+        color: white;
+      }
+      form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        .input-box {
+          position: relative;
+          width: 600px;
+          height: 200px;
+          margin-bottom: 20px;
+          background: #354060;
+          border: 3px solid #252c42;
+          border-radius: 20px;
+          text-align: top;
+        }
+        .submit-btn {
+          position: relative;
+          width: 150px;
+          height: 50px;
+          align-self: flex-end;
+          background: none;
+          border: 5px solid #252c42;
+          color: white;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .description-p {
+      position: relative;
+      font-size: 40px;
+      text-align: center;
+      height: 100px;
+      width: 600px;
+      background: none;
+      border: 2px solid black;
+    }
+  }
+}

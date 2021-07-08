@@ -5,24 +5,27 @@ import "./App.css";
 
 import Home from "./Home";
 import Sales from "./Sales";
-const FourOhFour = () => {
-  const { pathname } = useLocation();
+import Admin from "./Admin";
 
-  return (
-    <h3>
-      No match for <code>{pathname}</code>
-    </h3>
-  );
-};
+// const FourOhFour = () => {
+//   const { pathname } = useLocation();
+
+//   return (
+//     <h3>
+//       No match for <code>{pathname}</code>
+//     </h3>
+//   );
+// };
 function App() {
   return (
     <div className="app">
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/Sales" component={Sales} />
-        <Route path="*">
+        <Route exact path="/Admin" component={Admin} />
+        {/* <Route path="*">
           <FourOhFour />
-        </Route>
+        </Route> */}
       </Switch>
     </div>
   );
