@@ -50,6 +50,7 @@ function Photos() {
   };
 
   const deleteAllDaddysPhotos = () => {
+    console.log("it works");
     axios.get("http://localhost:5000/api/file").then((data) => {
       data.data.forEach((item) => {
         axios.delete(`http://localhost:5000/api/file/${item}`);
@@ -60,7 +61,11 @@ function Photos() {
   return (
     <div>
       <Row className="dropzone-row">
-        <FileBase64 multiple={true} onDone={(e) => convertImages(e)} />
+        <FileBase64
+          multiple={true}
+          onDone={(e) => convertImages(e)}
+          className="photo-cont"
+        />
         {/* <div className="dropzone" {...getRootProps({ className: "dropzone" })}>
           <input {...getInputProps()} />
           <p>Drag 'n' drop some files here, or click to select files</p>
@@ -68,13 +73,24 @@ function Photos() {
       </Row>
       <div className="photo-cont">
         {files.length > 0
-          ? files.map((x) => <img src={x.base64} key={x.title} alt="image" />)
+          ? files.map((x) => (
+              <img
+                src={x.base64}
+                key={x.title}
+                className="images"
+                alt="image"
+              />
+            ))
           : ""}
       </div>
-      <button onClick={() => handleSubmit()}>hello submit me daddy</button>
-      <button onClick={() => deleteAllDaddysPhotos()}>
-        owo no plz no delete
-      </button>
+      <div>
+        <button onClick={() => handleSubmit()} className="">
+          Post pictures to website
+        </button>
+        <button onClick={() => deleteAllDaddysPhotos()}>
+          Delete photos on website
+        </button>
+      </div>
     </div>
   );
 }

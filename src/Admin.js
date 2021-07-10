@@ -39,7 +39,7 @@ function Admin() {
       <Nav />
       <Container fluid className="admin-container">
         <Row className="row-1">
-          <Col xl={12} className="textbox-col">
+          <Col xl={6} md={12} className="textbox-col">
             <h1 className="desc-h1">Enter descripion here</h1>
             <form onSubmit={(e) => handleSubmit(e)}>
               <input
@@ -54,10 +54,10 @@ function Admin() {
             <Textbox textbox={textBoxValue} />
           </Col>
           {/* Drop zone */}
-          <Col>
-            <Photos />
-          </Col>
         </Row>
+        <Col xl={6} md={12} className="photo-col">
+          <Photos />
+        </Col>
       </Container>
     </div>
   );
