@@ -2,14 +2,17 @@ import React, { useState, useEffect, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import axios from "axios";
 import { FaArrowDown } from "react-icons/fa";
+import { useHistory, Link } from "react-router-dom";
+
 // Components
 import Textbox from "./components/admin/textbox";
 import Nav from "./components/nav";
 import Photos from "./components/admin/photos";
-
+import Logout from "./components/admin/logout";
 function Admin() {
   const [textBoxValue, setTextBoxValue] = useState("");
   const currentTextValue = useRef(null);
+  const history = useHistory();
 
   const fetchInitialText = () => {
     axios
@@ -27,12 +30,21 @@ function Admin() {
       description: currentTextValue.current.value,
     };
     axios
-      .put("http://hot-potatoes.herokuapp.com/api/description", object)
+      .put("https://hot-potatoes.herokuapp.com/api/description", object)
       .then(fetchInitialText());
+  };
+
+  const checkLoggedIn = () => {
+    const loggedIn = localStorage.getItem("loggedIn");
+
+    if (loggedIn === false || loggedIn === null) {
+      history.push("/login");
+    }
   };
 
   useEffect(() => {
     fetchInitialText();
+    checkLoggedIn();
   }, []);
   return (
     <div>
@@ -59,6 +71,9 @@ function Admin() {
           <Col xl={6} md={12} className="photo-col">
             <Photos />
           </Col>
+          <Link className="logout" to="/Logout">
+            Logo ut
+          </Link>
         </Row>
       </Container>
     </div>

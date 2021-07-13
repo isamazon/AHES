@@ -7,6 +7,7 @@ import axios from "axios";
 function Sales(props) {
   const [value, setValue] = useState("");
   const [photos, setPhotos] = useState([]);
+  const [clickedPhoto, setClickedPhoto] = useState("");
 
   const fetchData = () => {
     axios
@@ -33,15 +34,28 @@ function Sales(props) {
           <h1 className="sale-h1">Items for sale!</h1>
           <p className="description-p">{value}</p>
           <div className="photo-container">
-            {photos.map((x) => (
-              <Col xl={4} key={x} className="">
-                <img
-                  src={`http://localhost:5000/api/file/${x}`}
-                  className="item-photos"
-                  alt="photos"
-                />
-              </Col>
-            ))}
+            {clickedPhoto.length > 0 ? (
+              <div>
+                <button onClick={() => setClickedPhoto("")}>X</button>
+
+                <img src={`http://localhost:5000/api/file/${clickedPhoto}`} />
+              </div>
+            ) : (
+              photos.map((x) => (
+                <Col
+                  xl={4}
+                  key={x}
+                  className=""
+                  onClick={() => setClickedPhoto(x)}
+                >
+                  <img
+                    src={`http://localhost:5000/api/file/${x}`}
+                    className="item-photos"
+                    alt="photos"
+                  />
+                </Col>
+              ))
+            )}
           </div>
         </Row>
       </Container>

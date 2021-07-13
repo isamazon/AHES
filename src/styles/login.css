@@ -1,0 +1,55 @@
+.login-container {
+  position: relative;
+  height: 100vh;
+  background: #22272c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-container .login-form-cnt {
+  position: relative;
+  height: 1000px;
+  width: 800px;
+  border-radius: 30px;
+  background: rgba(245, 245, 245, 0.6);
+  -webkit-box-shadow: 0px 10px 20px black;
+          box-shadow: 0px 10px 20px black;
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-container .login-form-cnt .top-logo {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  top: -20%;
+}
+
+.login-container .login-form-cnt .form {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=login.css.map */

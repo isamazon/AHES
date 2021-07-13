@@ -3,21 +3,14 @@ import { Container, Row, Col } from "react-bootstrap";
 // import { useDropzone } from "react-dropzone";
 import FileBase64 from "react-file-base64";
 import axios from "axios";
-import ModalImage from "react-modal-image";
+
 // CSS
 import "../../styles/admin.css";
 
 function Photos() {
-  // const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
   const [files, setFiles] = useState([]);
 
-  // Modal image
-  const [image, setImage] = useState("");
-
   const convertImages = (uwu) => {
-    // acceptedFiles.map((x) => {
-    //   const image = x.path;
-    // });
     console.log(uwu);
     if (uwu.length > 0) {
       let outputFiles = [...files];
@@ -28,7 +21,7 @@ function Photos() {
         };
         outputFiles.push(object);
       });
-      setFiles(outputFiles);
+      setFiles([...outputFiles]);
     } else {
       const object = {
         title: uwu[0].title,
@@ -66,15 +59,11 @@ function Photos() {
     <div>
       <Row className="dropzone-row">
         <FileBase64 multiple={true} onDone={(e) => convertImages(e)} />
-        {/* <div className="dropzone" {...getRootProps({ className: "dropzone" })}>
-          <input {...getInputProps()} />
-          <p>Drag 'n' drop some files here, or click to select files</p>
-        </div> */}
       </Row>
       <div className="photo-cont">
         {files.length > 0
           ? files.map((x) => (
-              <ModalImage
+              <img
                 src={x.base64}
                 key={x.title}
                 className="images"

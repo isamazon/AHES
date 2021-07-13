@@ -146,7 +146,7 @@
   overflow-y: auto;
 }
 
-.admin-container .photo-col {
+.admin-container .row-1 .photo-col {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -166,7 +166,7 @@
           box-shadow: 20px 0px 20px black;
 }
 
-.admin-container .photo-col .dropzone-row {
+.admin-container .row-1 .photo-col .dropzone-row {
   position: relative;
   height: 150px;
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='black' stroke-width='11' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
@@ -185,7 +185,7 @@
   margin-top: 20px;
 }
 
-.admin-container .photo-col .dropzone-row input {
+.admin-container .row-1 .photo-col .dropzone-row input {
   position: absolute;
   background: none;
   height: 100%;
