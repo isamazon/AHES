@@ -37,7 +37,9 @@ function Admin() {
   return (
     <div>
       <Nav />
+
       <Container fluid className="admin-container">
+        <h1 className="welcome-h1">Welcome frank</h1>
         <Row className="row-1">
           <Col xl={6} md={12} className="textbox-col">
             <h1 className="desc-h1">Enter descripion here</h1>
@@ -50,14 +52,14 @@ function Admin() {
               />
               <input type="submit" value="submit" className="submit-btn" />
             </form>
-            <h1>What customers will see</h1>
+            <h1 className="return-h1">What customers will see</h1>
             <Textbox textbox={textBoxValue} />
           </Col>
           {/* Drop zone */}
+          <Col xl={6} md={12} className="photo-col">
+            <Photos />
+          </Col>
         </Row>
-        <Col xl={6} md={12} className="photo-col">
-          <Photos />
-        </Col>
       </Container>
     </div>
   );

@@ -28,16 +28,22 @@ function Sales(props) {
   return (
     <div>
       <Nav />
-      <Container>
-        <h1>{value}</h1>
-        {photos.map((x) => (
-          <div key={x} className="">
-            <img
-              src={`http://localhost:5000/api/file/${x}`}
-              alt="some stuff uwu"
-            />
+      <Container fluid className="gallery-cont">
+        <Row className="row-1">
+          <h1 className="sale-h1">Items for sale!</h1>
+          <p className="description-p">{value}</p>
+          <div className="photo-container">
+            {photos.map((x) => (
+              <Col xl={4} key={x} className="">
+                <img
+                  src={`http://localhost:5000/api/file/${x}`}
+                  className="item-photos"
+                  alt="photos"
+                />
+              </Col>
+            ))}
           </div>
-        ))}
+        </Row>
       </Container>
     </div>
   );

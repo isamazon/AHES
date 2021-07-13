@@ -1,8 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+$font-1: "Anton", sans-serif;
+
 .gallery-cont {
   position: relative;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: none;
+  background: url("../assets/salesbg1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  .row-1 {
+    position: relative;
+    height: 100vh;
+    width: 80%;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .sale-h1 {
+      position: relative;
+      top: 5%;
+      height: 100px;
+      font-size: 60px;
+      width: 100%;
+      text-align: center;
+      color: black;
+      text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.418);
+      font-family: $font-1;
+      text-transform: uppercase;
+      z-index: 1;
+    }
+    .description-p {
+      position: relative;
+      width: 80%;
+      top: 0%;
+      font-size: 25px;
+      padding: 50px 0px;
+      font-weight: 600;
+      text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.295);
+      text-align: center;
+      background: rgba(255, 255, 255, 0.35);
+      box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.404);
+      backdrop-filter: blur(17px);
+      -webkit-backdrop-filter: blur(17px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 50px;
+    }
+    .photo-container {
+      position: relative;
+      background: rgba(255, 255, 255, 0.35);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(17px);
+      -webkit-backdrop-filter: blur(17px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      top: 5%;
+      padding: 50px 0px;
+      height: 800px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      overflow-y: auto;
+      .item-photos {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        padding-bottom: 20px;
+        border-radius: 10px;
+      }
+    }
+  }
 }

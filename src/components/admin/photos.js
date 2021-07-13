@@ -3,12 +3,16 @@ import { Container, Row, Col } from "react-bootstrap";
 // import { useDropzone } from "react-dropzone";
 import FileBase64 from "react-file-base64";
 import axios from "axios";
+import ModalImage from "react-modal-image";
 // CSS
 import "../../styles/admin.css";
 
 function Photos() {
   // const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
   const [files, setFiles] = useState([]);
+
+  // Modal image
+  const [image, setImage] = useState("");
 
   const convertImages = (uwu) => {
     // acceptedFiles.map((x) => {
@@ -49,7 +53,7 @@ function Photos() {
     }
   };
 
-  const deleteAllDaddysPhotos = () => {
+  const deleteAllPhotos = () => {
     console.log("it works");
     axios.get("http://localhost:5000/api/file").then((data) => {
       data.data.forEach((item) => {
@@ -61,11 +65,7 @@ function Photos() {
   return (
     <div>
       <Row className="dropzone-row">
-        <FileBase64
-          multiple={true}
-          onDone={(e) => convertImages(e)}
-          className="photo-cont"
-        />
+        <FileBase64 multiple={true} onDone={(e) => convertImages(e)} />
         {/* <div className="dropzone" {...getRootProps({ className: "dropzone" })}>
           <input {...getInputProps()} />
           <p>Drag 'n' drop some files here, or click to select files</p>
@@ -74,7 +74,7 @@ function Photos() {
       <div className="photo-cont">
         {files.length > 0
           ? files.map((x) => (
-              <img
+              <ModalImage
                 src={x.base64}
                 key={x.title}
                 className="images"
@@ -83,11 +83,11 @@ function Photos() {
             ))
           : ""}
       </div>
-      <div>
-        <button onClick={() => handleSubmit()} className="">
+      <div className="button-container">
+        <button onClick={() => handleSubmit()} className="button-post">
           Post pictures to website
         </button>
-        <button onClick={() => deleteAllDaddysPhotos()}>
+        <button onClick={() => deleteAllPhotos()} className="button-post">
           Delete photos on website
         </button>
       </div>

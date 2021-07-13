@@ -1,6 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 .gallery-cont {
   position: relative;
-  height: 100vh;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,6 +11,92 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: url("../assets/salesbg1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.gallery-cont .row-1 {
+  position: relative;
+  height: 100vh;
+  width: 80%;
   background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gallery-cont .row-1 .sale-h1 {
+  position: relative;
+  top: 5%;
+  height: 100px;
+  font-size: 60px;
+  width: 100%;
+  text-align: center;
+  color: black;
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.418);
+  font-family: "Anton", sans-serif;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.gallery-cont .row-1 .description-p {
+  position: relative;
+  width: 80%;
+  top: 0%;
+  font-size: 25px;
+  padding: 50px 0px;
+  font-weight: 600;
+  text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.295);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.35);
+  -webkit-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.404);
+          box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.404);
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50px;
+}
+
+.gallery-cont .row-1 .photo-container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.35);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  top: 5%;
+  padding: 50px 0px;
+  height: 800px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+.gallery-cont .row-1 .photo-container .item-photos {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 20px;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=sales.css.map */
