@@ -1,7 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+$font-1: "Anton", sans-serif;
+
 .login-container {
   position: relative;
   height: 100vh;
-  background: #22272c;
+  background: linear-gradient(
+    1deg,
+    #00a3ff,
+    #e60505,
+    #76e6ff,
+    #00aef0,
+    #d41010
+  );
+  background-size: 1000% 1000%;
+
+  -webkit-animation: AnimationName 20s ease infinite;
+  -moz-animation: AnimationName 20s ease infinite;
+  animation: AnimationName 20s ease infinite;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,23 +25,111 @@
     height: 1000px;
     width: 800px;
     border-radius: 30px;
-    background: rgba(245, 245, 245, 0.6);
-    box-shadow: 0px 10px 20px rgb(0, 0, 0);
-    backdrop-filter: blur(10.5px);
-    -webkit-backdrop-filter: blur(5.5px);
+    background: whitesmoke;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0px 5px 20px black;
+    transition: 0.5s;
+    &:hover {
+      box-shadow: 0px 10px 50px black;
+    }
     .top-logo {
-      position: relative;
+      position: absolute;
       height: 400px;
       width: 400px;
       top: -20%;
+      z-index: 3;
+    }
+    .login-h1 {
+      position: absolute;
+      top: 10%;
+      text-transform: uppercase;
+      font-size: 90px;
+      font-family: $font-1;
+      width: 100%;
+      text-align: center;
+      color: black;
+      z-index: 4;
     }
     .form {
       position: relative;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      width: 100%;
+      height: 100%;
+      .username-input,
+      .password-input {
+        width: 80%;
+        height: 50px;
+        background: whitesmoke;
+        border: none;
+        border-bottom: 3px solid red;
+        outline: 0;
+        margin-bottom: 100px;
+        &::placeholder {
+          color: black;
+          text-transform: uppercase;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+      .login-button {
+        position: relative;
+        width: 80%;
+        background: none;
+        height: 50px;
+        border: 10px solid;
+        border-image-slice: 1;
+        border-width: 3px;
+        border-radius: 20px;
+        border-image-source: linear-gradient(to left, #d43a57, #0da0f2);
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: 0.5s;
+        &:hover {
+          transform: translateY(-10px);
+        }
+      }
     }
+  }
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 92% 0%;
+  }
+  50% {
+    background-position: 9% 100%;
+  }
+  100% {
+    background-position: 92% 0%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 92% 0%;
+  }
+  50% {
+    background-position: 9% 100%;
+  }
+  100% {
+    background-position: 92% 0%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 92% 0%;
+  }
+  50% {
+    background-position: 9% 100%;
+  }
+  100% {
+    background-position: 92% 0%;
   }
 }

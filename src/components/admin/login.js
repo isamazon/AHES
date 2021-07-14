@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 // CSS
 import "../../styles/login.css";
 import Logo from "../../assets/logo.png";
-
+import Nav from "../nav";
 function Login() {
   const [warningMessage, setWarningMessage] = useState("");
   const username = useRef(null);
@@ -30,7 +30,7 @@ function Login() {
       currentPassword === secretPassword
     ) {
       setLoggedInTrue(true);
-      history.push("/admin");
+      history.push("/admin"); // hi
     } else {
       setLoggedInTrue(false);
     }
@@ -38,23 +38,26 @@ function Login() {
 
   return (
     <Container fluid className="login-container">
+      <Nav />
       <div className="login-form-cnt">
         <img src={Logo} className="top-logo" alt="" />
+        <h1 className="login-h1">Login</h1>
         <form onSubmit={(e) => handleSubmitForm(e)} className="form">
           <input
             ref={username}
             type="text"
             name="username"
             placeholder="username"
-            className=""
+            className="username-input"
           />
           <input
             ref={password}
             type="password"
             name="password"
             placeholder="password"
+            className="password-input"
           />
-          <input type="submit" />
+          <input type="submit" value="Login" className="login-button" />
         </form>
       </div>
     </Container>

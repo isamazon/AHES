@@ -13,11 +13,11 @@ function Landingpage() {
             Welcome, to American Household Estate Sales
           </h1>
           <div className="link-container">
-            <Link to="/" className="link-1">
+            <Link to="/Sales" className="link-1">
               <button className="button-1">Upcoming Sales</button>
             </Link>
             <Link to="/" className="link-1">
-              <button className="button-1 about-btn">About </button>
+              <button className="button-1 about-btn">About</button>
             </Link>
           </div>
         </Col>
