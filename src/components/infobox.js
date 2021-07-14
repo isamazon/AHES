@@ -5,14 +5,13 @@ import "aos/dist/aos.css";
 function InfoBox(props) {
   useEffect(() => {
     AOS.init();
-    AOS.refresh();
   }, []);
 
   return (
-    <Col xl={3} lg={2} className="info-col">
+    <Col xl={3} lg={6} className="info-col">
       <div
         data-aos={props.animation}
-        data-aos-offset="500"
+        data-aos-offset="100"
         className="inner-col"
       >
         <img

@@ -21,7 +21,9 @@
     z-index: 1;
     @media screen and (max-width: 1300px) {
       background: url("../assets/landingpagemedium.png");
-      background-position: center;
+      background-position: bottom;
+      background-size: auto;
+      background-repeat: no-repeat;
     }
   }
   .star {
@@ -138,6 +140,11 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top;
+    @media screen and (max-width: 1300px) {
+      background: url("../assets/topwavemedium.png");
+      background-position: top;
+      background-size: auto;
+    }
   }
   .about-row {
     position: relative;
