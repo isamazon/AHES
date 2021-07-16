@@ -47,7 +47,12 @@
       background: none;
       display: flex;
       flex-direction: column;
-
+      @media screen and (max-width: 1300px) {
+        width: 100%;
+        top: 0%;
+        background: none;
+        height: 100%;
+      }
       .welcome-h1 {
         position: relative;
         left: 15%;
@@ -57,7 +62,7 @@
         width: 90%;
         padding: 0px 0px;
         background: none;
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1300px) {
           display: flex;
           justify-content: center;
           width: 100%;
@@ -74,18 +79,10 @@
         display: flex;
         flex-direction: row;
         padding: 50px 0px;
-        @media screen and (max-width: 1200px) {
-          padding: 0px 0px;
-          left: 0%;
-          top: 25%;
-          width: 100%;
-          justify-content: center;
-        }
         .link-1 {
           position: relative;
           margin-right: 20px;
-          @media screen and (max-width: 1200px) {
-          }
+
           .button-1 {
             background: #d43a57;
             border: 0px solid black;
@@ -105,18 +102,12 @@
           .about-btn {
             background: #0da0f2;
             transition: 0.5s;
-            @media screen and (max-width: 1200px) {
-              width: 213px;
-            }
             &:hover {
               background: #d43a57;
             }
           }
         }
       }
-    }
-    .col-2 {
-      position: relative;
     }
   }
 }
@@ -129,7 +120,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  @media screen and (max-width: 1300px) {
+    align-items: center;
+  }
   .topwave {
     position: absolute;
     top: 0%;
@@ -144,6 +137,7 @@
       background: url("../assets/topwavemedium.png");
       background-position: top;
       background-size: auto;
+      background-repeat: no-repeat;
     }
   }
   .about-row {
@@ -162,6 +156,9 @@
       background: none;
       display: flex;
       justify-content: center;
+      @media screen and (max-width: 1300px) {
+        margin-bottom: 200px;
+      }
       .inner-col {
         position: relative;
         height: 450px;
@@ -173,6 +170,9 @@
         box-shadow: 0px -20px 20px rgba(0, 0, 0, 0.192);
         border-radius: 10px;
         transition: 0.5s;
+        @media screen and (max-width: 1300px) {
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.274);
+        }
         &:hover {
           box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.192);
         }
@@ -253,6 +253,9 @@
       flex-direction: column;
       align-items: flex-end;
       justify-content: center;
+      @media screen and (max-width: 1300px) {
+        align-items: center;
+      }
       .newsletter-h1 {
         color: #d43a57;
         text-transform: uppercase;
@@ -274,6 +277,9 @@
         justify-content: flex-end;
         align-items: center;
         background: none;
+        @media screen and (max-width: 1300px) {
+          justify-content: center;
+        }
         .subscribe-email {
           position: relative;
           width: 60%;
@@ -320,6 +326,11 @@
       background: none;
       display: flex;
       justify-content: flex-start;
+      @media screen and (max-width: 1300px) {
+        justify-content: center;
+        height: 500px;
+        width: 100%;
+      }
     }
   }
 }

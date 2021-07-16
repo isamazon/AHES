@@ -71,6 +71,15 @@
           flex-direction: column;
 }
 
+@media screen and (max-width: 1300px) {
+  .landing-page-cnt .row-1 .col-1 {
+    width: 100%;
+    top: 0%;
+    background: none;
+    height: 100%;
+  }
+}
+
 .landing-page-cnt .row-1 .col-1 .welcome-h1 {
   position: relative;
   left: 15%;
@@ -82,7 +91,7 @@
   background: none;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
   .landing-page-cnt .row-1 .col-1 .welcome-h1 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -110,18 +119,6 @@
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 50px 0px;
-}
-
-@media screen and (max-width: 1200px) {
-  .landing-page-cnt .row-1 .col-1 .link-container {
-    padding: 0px 0px;
-    left: 0%;
-    top: 25%;
-    width: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
 }
 
 .landing-page-cnt .row-1 .col-1 .link-container .link-1 {
@@ -157,18 +154,8 @@
   transition: 0.5s;
 }
 
-@media screen and (max-width: 1200px) {
-  .landing-page-cnt .row-1 .col-1 .link-container .link-1 .about-btn {
-    width: 213px;
-  }
-}
-
 .landing-page-cnt .row-1 .col-1 .link-container .link-1 .about-btn:hover {
   background: #d43a57;
-}
-
-.landing-page-cnt .row-1 .col-2 {
-  position: relative;
 }
 
 .about-section {
@@ -185,6 +172,14 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (max-width: 1300px) {
+  .about-section {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .about-section .topwave {
@@ -204,6 +199,7 @@
     background: url("../assets/topwavemedium.png");
     background-position: top;
     background-size: auto;
+    background-repeat: no-repeat;
   }
 }
 
@@ -235,6 +231,12 @@
           justify-content: center;
 }
 
+@media screen and (max-width: 1300px) {
+  .about-section .about-row .info-col {
+    margin-bottom: 200px;
+  }
+}
+
 .about-section .about-row .info-col .inner-col {
   position: relative;
   height: 450px;
@@ -255,6 +257,13 @@
   border-radius: 10px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+@media screen and (max-width: 1300px) {
+  .about-section .about-row .info-col .inner-col {
+    -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.274);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.274);
+  }
 }
 
 .about-section .about-row .info-col .inner-col:hover {
@@ -374,6 +383,14 @@
           justify-content: center;
 }
 
+@media screen and (max-width: 1300px) {
+  .about-section .mailing-row .info-mail {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .about-section .mailing-row .info-mail .newsletter-h1 {
   color: #d43a57;
   text-transform: uppercase;
@@ -406,6 +423,14 @@
       -ms-flex-align: center;
           align-items: center;
   background: none;
+}
+
+@media screen and (max-width: 1300px) {
+  .about-section .mailing-row .info-mail .subscribe-form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .about-section .mailing-row .info-mail .subscribe-form .subscribe-email {
@@ -474,6 +499,16 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+@media screen and (max-width: 1300px) {
+  .about-section .mailing-row .subscribe-col {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 500px;
+    width: 100%;
+  }
 }
 
 #bluestar,

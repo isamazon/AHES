@@ -37,13 +37,13 @@ function Sales(props) {
             {clickedPhoto.length > 0 ? (
               <div>
                 <button onClick={() => setClickedPhoto("")}>X</button>
-
                 <img src={`http://localhost:5000/api/file/${clickedPhoto}`} />
               </div>
             ) : (
               photos.map((x) => (
                 <Col
                   xl={4}
+                  md={6}
                   key={x}
                   className=""
                   onClick={() => setClickedPhoto(x)}
