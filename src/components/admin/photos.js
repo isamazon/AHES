@@ -39,7 +39,7 @@ function Photos() {
           title: item.title,
           base64: base64Image,
         };
-        axios.put("http://localhost:5000/api/file", object);
+        axios.put("https://hot-potatoes.herokuapp.com/api/file", object);
       });
     } else {
       return null;
@@ -48,9 +48,9 @@ function Photos() {
 
   const deleteAllPhotos = () => {
     console.log("it works");
-    axios.get("http://localhost:5000/api/file").then((data) => {
+    axios.get("https://hot-potatoes.herokuapp.com/api/file").then((data) => {
       data.data.forEach((item) => {
-        axios.delete(`http://localhost:5000/api/file/${item}`);
+        axios.delete(`https://hot-potatoes.herokuapp.com/api/file/${item}`);
       });
     });
   };

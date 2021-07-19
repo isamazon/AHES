@@ -17,7 +17,7 @@ function Sales(props) {
 
   const fetchPhotos = () => {
     axios
-      .get("http://localhost:5000/api/file")
+      .get("https://hot-potatoes.herokuapp.com/api/file")
       .then((data) => setPhotos(data.data));
   };
 
@@ -37,7 +37,9 @@ function Sales(props) {
             {clickedPhoto.length > 0 ? (
               <div>
                 <button onClick={() => setClickedPhoto("")}>X</button>
-                <img src={`http://localhost:5000/api/file/${clickedPhoto}`} />
+                <img
+                  src={`https://hot-potatoes.herokuapp.com/api/file/${clickedPhoto}`}
+                />
               </div>
             ) : (
               photos.map((x) => (
@@ -49,7 +51,7 @@ function Sales(props) {
                   onClick={() => setClickedPhoto(x)}
                 >
                   <img
-                    src={`http://localhost:5000/api/file/${x}`}
+                    src={`https://hot-potatoes.herokuapp.com/api/file/${x}`}
                     className="item-photos"
                     alt="photos"
                   />

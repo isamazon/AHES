@@ -347,9 +347,9 @@
   transform-box: fill-box;
 }
 #letter {
-  animation: down2up 10s infinite ease-in-out;
+  animation: downtoup 10s infinite ease-in-out;
 }
-@keyframes down2up {
+@keyframes downtoup {
   0% {
     transform: translateY(0px);
   }

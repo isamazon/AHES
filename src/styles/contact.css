@@ -34,7 +34,7 @@
   position: relative;
   height: 100%;
   border-radius: 20px;
-  background: black;
+  background: #000000;
   left: 20px;
   z-index: 1;
   -webkit-box-shadow: 0px 5px 10px black;
@@ -48,6 +48,7 @@
   font-size: 40px;
   padding: 0px 10px;
   width: 100%;
+  z-index: 1;
 }
 
 .contact-container .contact-row .contact-info-col p {
@@ -55,6 +56,80 @@
   width: 100%;
   padding: 20px 10px;
   color: white;
+  z-index: 1;
+}
+
+.contact-container .contact-row .contact-info-col .contact-list {
+  position: relative;
+  width: 100%;
+  height: 30%;
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-left: 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-container .contact-row .contact-info-col .contact-list .list-item {
+  list-style: none;
+  font-size: 20px;
+  padding: 10px 10px;
+  color: white;
+  font-weight: 600;
+}
+
+.contact-container .contact-row .contact-info-col .stars {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 90%;
+  background: none;
+}
+
+.contact-container .contact-row .contact-info-col .stars .star1,
+.contact-container .contact-row .contact-info-col .stars .star2,
+.contact-container .contact-row .contact-info-col .stars .star3,
+.contact-container .contact-row .contact-info-col .stars .star4,
+.contact-container .contact-row .contact-info-col .stars .star5 {
+  position: absolute;
+  bottom: -20%;
+}
+
+.contact-container .contact-row .contact-info-col .stars .star1 {
+  -webkit-animation: down2up 5s infinite linear;
+          animation: down2up 5s infinite linear;
+}
+
+.contact-container .contact-row .contact-info-col .stars .star2 {
+  left: 50%;
+  -webkit-animation: down2up 4s infinite linear;
+          animation: down2up 4s infinite linear;
+}
+
+.contact-container .contact-row .contact-info-col .stars .star3 {
+  left: 30%;
+  -webkit-animation: down2up 5.5s infinite linear;
+          animation: down2up 5.5s infinite linear;
+}
+
+.contact-container .contact-row .contact-info-col .stars .star4 {
+  left: 80%;
+  -webkit-animation: down2up 8s infinite linear;
+          animation: down2up 8s infinite linear;
+}
+
+.contact-container .contact-row .contact-info-col .stars .star5 {
+  left: 65%;
+  -webkit-animation: down2up 6s infinite linear;
+          animation: down2up 6s infinite linear;
 }
 
 .contact-container .contact-row .contact-form-col {
@@ -120,6 +195,23 @@
   width: 45%;
   padding-left: 10px;
   color: black;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: -webkit-gradient(linear, left top, right top, from(#00a3ff), to(#d41010)) center bottom/0 2px no-repeat, -webkit-gradient(linear, left top, right top, from(black), to(black)) left bottom/100% 2px no-repeat, -webkit-gradient(linear, left top, right top, from(white), to(white)) left bottom/100% 100% no-repeat;
+  background: linear-gradient(90deg, #00a3ff, #d41010) center bottom/0 2px no-repeat, linear-gradient(90deg, black, black) left bottom/100% 2px no-repeat, linear-gradient(90deg, white, white) left bottom/100% 100% no-repeat;
+  -webkit-transition: background-size 0.3s ease;
+  transition: background-size 0.3s ease;
+  border-radius: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  outline: none;
+  font-size: 15px;
+}
+
+.contact-container .contact-row .contact-form-col form .name-inputs .name-input:valid, .contact-container .contact-row .contact-form-col form .name-inputs .name-input:focus {
+  background-size: 100% 2px, 100% 2px, 100%;
 }
 
 .contact-container .contact-row .contact-form-col form .name-inputs .name-input:focus {
@@ -146,6 +238,44 @@
   right: 5%;
   padding: 10px 50px;
   background: none;
+}
+
+@-webkit-keyframes down2up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  10% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-900px);
+            transform: translateY(-900px);
+  }
+}
+
+@keyframes down2up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  10% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-900px);
+            transform: translateY(-900px);
+  }
 }
 
 @-webkit-keyframes AnimationName {

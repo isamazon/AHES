@@ -530,11 +530,11 @@
 }
 
 #letter {
-  -webkit-animation: down2up 10s infinite ease-in-out;
-          animation: down2up 10s infinite ease-in-out;
+  -webkit-animation: downtoup 10s infinite ease-in-out;
+          animation: downtoup 10s infinite ease-in-out;
 }
 
-@-webkit-keyframes down2up {
+@-webkit-keyframes downtoup {
   0% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
@@ -549,7 +549,7 @@
   }
 }
 
-@keyframes down2up {
+@keyframes downtoup {
   0% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
