@@ -1,0 +1,174 @@
+.contact-container {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(87deg, #00a3ff, #e60505, #4acdea, #00aef0, #d41010);
+  background-size: 1000% 1000%;
+  -webkit-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-container .contact-row {
+  position: relative;
+  height: 900px;
+  width: 70%;
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.contact-container .contact-row .contact-info-col {
+  position: relative;
+  height: 100%;
+  border-radius: 20px;
+  background: black;
+  left: 20px;
+  z-index: 1;
+  -webkit-box-shadow: 0px 5px 10px black;
+          box-shadow: 0px 5px 10px black;
+}
+
+.contact-container .contact-row .contact-info-col h1 {
+  position: relative;
+  color: white;
+  top: 20px;
+  font-size: 40px;
+  padding: 0px 10px;
+  width: 100%;
+}
+
+.contact-container .contact-row .contact-info-col p {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px;
+  color: white;
+}
+
+.contact-container .contact-row .contact-form-col {
+  position: relative;
+  height: 100%;
+  background: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  -webkit-box-shadow: 0px 5px 20px black;
+          box-shadow: 0px 5px 20px black;
+}
+
+.contact-container .contact-row .contact-form-col .logo {
+  position: absolute;
+  z-index: 2;
+  top: -30%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contact-container .contact-row .contact-form-col .logo:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.contact-container .contact-row .contact-form-col form {
+  position: relative;
+  height: 80%;
+  background: none;
+  width: 100%;
+}
+
+.contact-container .contact-row .contact-form-col form .name-inputs {
+  position: relative;
+  background: none;
+  height: 200px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-container .contact-row .contact-form-col form .name-inputs .name-input {
+  position: relative;
+  border: 0px;
+  border-bottom: 5px solid black;
+  height: 50px;
+  width: 45%;
+  padding-left: 10px;
+  color: black;
+}
+
+.contact-container .contact-row .contact-form-col form .name-inputs .name-input:focus {
+  outline: none;
+}
+
+.contact-container .contact-row .contact-form-col form .name-inputs .textbox {
+  position: relative;
+  height: 100%;
+  width: 90%;
+  border: 2px solid black;
+  -webkit-box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.404);
+          box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.404);
+  padding: 10px 10px;
+}
+
+.contact-container .contact-row .contact-form-col form .name-inputs .textbox:focus {
+  outline: none;
+}
+
+.contact-container .contact-row .contact-form-col form .submit-message {
+  position: absolute;
+  bottom: 0%;
+  right: 5%;
+  padding: 10px 50px;
+  background: none;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/*# sourceMappingURL=contact.css.map */

@@ -8,6 +8,7 @@ import Sales from "./Sales";
 import Admin from "./Admin";
 import Login from "./components/admin/login";
 import Logout from "./components/admin/logout";
+import Contact from "./components/contact/contact";
 // const FourOhFour = () => {
 //   const { pathname } = useLocation();
 
@@ -26,6 +27,7 @@ function App() {
         <Route exact path="/Admin" component={Admin} />
         <Route exact path="/Login" component={Login} />
         <Route exact path="/Logout" component={Logout} />
+        <Route exact path="/Contact" component={Contact} />
         {/* <Route path="*">
           <FourOhFour />
         </Route> */}

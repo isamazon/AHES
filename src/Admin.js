@@ -56,7 +56,7 @@ function Admin() {
           <Col xl={6} md={12} className="textbox-col">
             <h1 className="desc-h1">Enter descripion here</h1>
             <form onSubmit={(e) => handleSubmit(e)}>
-              <input
+              <textarea
                 ref={currentTextValue}
                 type="text"
                 className="input-box"
@@ -71,10 +71,10 @@ function Admin() {
           <Col xl={6} md={12} className="photo-col">
             <Photos />
           </Col>
-          <Link className="logout" to="/Logout">
-            Logo ut
-          </Link>
         </Row>
+        <Link className="logout" to="/Logout">
+          Logout
+        </Link>
       </Container>
     </div>
   );

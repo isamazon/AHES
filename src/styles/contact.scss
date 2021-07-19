@@ -1,0 +1,149 @@
+.contact-container {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(
+    87deg,
+    #00a3ff,
+    #e60505,
+    #4acdea,
+    #00aef0,
+    #d41010
+  );
+  background-size: 1000% 1000%;
+
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .contact-row {
+    position: relative;
+    height: 900px;
+    width: 70%;
+    background: none;
+    display: flex;
+    flex-direction: row;
+    .contact-info-col {
+      position: relative;
+      height: 100%;
+      border-radius: 20px;
+      background: black;
+      left: 20px;
+      z-index: 1;
+      box-shadow: 0px 5px 10px black;
+      h1 {
+        position: relative;
+        color: white;
+        top: 20px;
+        font-size: 40px;
+        padding: 0px 10px;
+        width: 100%;
+      }
+      p {
+        position: relative;
+        width: 100%;
+        padding: 20px 10px;
+        color: white;
+      }
+    }
+    .contact-form-col {
+      position: relative;
+      height: 100%;
+      background: whitesmoke;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 0px 5px 20px black;
+      .logo {
+        position: absolute;
+        z-index: 2;
+        top: -30%;
+        transition: 0.5s;
+        &:hover {
+          transform: translateY(-5px);
+        }
+      }
+      form {
+        position: relative;
+        height: 80%;
+        background: none;
+        width: 100%;
+        .name-inputs {
+          position: relative;
+          background: none;
+          height: 200px;
+          width: 100%;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          .name-input {
+            position: relative;
+            border: 0px;
+            border-bottom: 5px solid black;
+            height: 50px;
+            width: 45%;
+            padding-left: 10px;
+            color: black;
+            &:focus {
+              outline: none;
+            }
+          }
+          .textbox {
+            position: relative;
+            height: 100%;
+            width: 90%;
+            border: 2px solid black;
+            box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.404);
+            padding: 10px 10px;
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+        .submit-message {
+          position: absolute;
+          bottom: 0%;
+          right: 5%;
+          padding: 10px 50px;
+          background: none;
+        }
+      }
+    }
+  }
+}
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -38,6 +38,8 @@ $font-1: "Anton", sans-serif;
       top: 0%;
       font-size: 25px;
       padding: 50px 0px;
+      height: 250px;
+      overflow-y: auto;
       font-weight: 600;
       text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.295);
       text-align: center;
@@ -45,7 +47,7 @@ $font-1: "Anton", sans-serif;
       box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.404);
       backdrop-filter: blur(17px);
       -webkit-backdrop-filter: blur(17px);
-      border-radius: 10px;
+
       border: 1px solid rgba(255, 255, 255, 0.18);
       border-radius: 50px;
     }
@@ -57,7 +59,7 @@ $font-1: "Anton", sans-serif;
       -webkit-backdrop-filter: blur(17px);
       border-radius: 20px;
       border: 1px solid rgba(255, 255, 255, 0.18);
-      top: 5%;
+      top: 0%;
       padding: 50px 0px;
       height: 800px;
       width: 100%;
