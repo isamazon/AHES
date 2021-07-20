@@ -53,7 +53,7 @@ function Admin() {
       <Container fluid className="admin-container">
         <h1 className="welcome-h1">Welcome frank</h1>
         <Row className="row-1">
-          <Col xl={6} md={12} className="textbox-col">
+          <Col xl={5} md={12} className="textbox-col">
             <h1 className="desc-h1">Enter descripion here</h1>
             <form onSubmit={(e) => handleSubmit(e)}>
               <textarea
@@ -68,7 +68,7 @@ function Admin() {
             <Textbox textbox={textBoxValue} />
           </Col>
           {/* Drop zone */}
-          <Col xl={6} md={12} className="photo-col">
+          <Col xl={7} md={12} className="photo-col">
             <Photos />
           </Col>
         </Row>

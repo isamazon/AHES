@@ -8,8 +8,8 @@ function Home() {
   return (
     <div>
       <Nav />
-      <Landing />
-      <Landing2 />
+      <Landing scrollto="anchor" />
+      <Landing2 scrollanchor="anchor" />
     </div>
   );
 }

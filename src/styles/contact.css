@@ -18,8 +18,9 @@
 
 .contact-container .contact-row {
   position: relative;
-  height: 900px;
+  height: 750px;
   width: 70%;
+  top: 5%;
   background: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -36,6 +37,13 @@
   border-radius: 20px;
   background: #000000;
   left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   z-index: 1;
   -webkit-box-shadow: 0px 5px 10px black;
           box-shadow: 0px 5px 10px black;
@@ -70,11 +78,11 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin-left: 50px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 1;
 }
 
 .contact-container .contact-row .contact-info-col .contact-list .list-item {
@@ -128,8 +136,8 @@
 
 .contact-container .contact-row .contact-info-col .stars .star5 {
   left: 65%;
-  -webkit-animation: down2up 6s infinite linear;
-          animation: down2up 6s infinite linear;
+  -webkit-animation: down2up 6.6s infinite linear;
+          animation: down2up 6.6s infinite linear;
 }
 
 .contact-container .contact-row .contact-form-col {
@@ -153,8 +161,8 @@
 
 .contact-container .contact-row .contact-form-col .logo {
   position: absolute;
-  z-index: 2;
-  top: -30%;
+  z-index: 0;
+  top: -35%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -169,6 +177,7 @@
   height: 80%;
   background: none;
   width: 100%;
+  z-index: 2;
 }
 
 .contact-container .contact-row .contact-form-col form .name-inputs {
@@ -220,12 +229,14 @@
 
 .contact-container .contact-row .contact-form-col form .name-inputs .textbox {
   position: relative;
-  height: 100%;
-  width: 90%;
-  border: 2px solid black;
-  -webkit-box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.404);
-          box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.404);
+  height: 200px;
+  top: -15%;
+  width: 95%;
+  border: 0px solid black;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.404);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.404);
   padding: 10px 10px;
+  resize: none;
 }
 
 .contact-container .contact-row .contact-form-col form .name-inputs .textbox:focus {
@@ -234,7 +245,7 @@
 
 .contact-container .contact-row .contact-form-col form .submit-message {
   position: absolute;
-  bottom: 0%;
+  bottom: -10%;
   right: 5%;
   padding: 10px 50px;
   background: none;
@@ -254,8 +265,8 @@
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateY(-900px);
-            transform: translateY(-900px);
+    -webkit-transform: translateY(-600px);
+            transform: translateY(-600px);
   }
 }
 
@@ -273,8 +284,8 @@
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateY(-900px);
-            transform: translateY(-900px);
+    -webkit-transform: translateY(-600px);
+            transform: translateY(-600px);
   }
 }
 

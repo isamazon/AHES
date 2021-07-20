@@ -19,8 +19,9 @@
   align-items: center;
   .contact-row {
     position: relative;
-    height: 900px;
+    height: 750px;
     width: 70%;
+    top: 5%;
     background: none;
     display: flex;
     flex-direction: row;
@@ -30,6 +31,8 @@
       border-radius: 20px;
       background: #000000;
       left: 20px;
+      display: flex;
+      flex-direction: column;
       z-index: 1;
       box-shadow: 0px 5px 10px black;
       h1 {
@@ -55,8 +58,8 @@
         background: none;
         display: flex;
         justify-content: space-evenly;
-        margin-left: 50px;
         flex-direction: column;
+        z-index: 1;
         .list-item {
           list-style: none;
           font-size: 20px;
@@ -97,7 +100,7 @@
         }
         .star5 {
           left: 65%;
-          animation: down2up 6s infinite linear;
+          animation: down2up 6.6s infinite linear;
         }
       }
     }
@@ -113,8 +116,8 @@
       box-shadow: 0px 5px 20px black;
       .logo {
         position: absolute;
-        z-index: 2;
-        top: -30%;
+        z-index: 0;
+        top: -35%;
         transition: 0.5s;
         &:hover {
           transform: translateY(-5px);
@@ -125,6 +128,7 @@
         height: 80%;
         background: none;
         width: 100%;
+        z-index: 2;
         .name-inputs {
           position: relative;
           background: none;
@@ -155,6 +159,7 @@
             border-top-right-radius: 3px;
             outline: none;
             font-size: 15px;
+
             &:valid,
             &:focus {
               background-size: 100% 2px, 100% 2px, 100%;
@@ -165,11 +170,13 @@
           }
           .textbox {
             position: relative;
-            height: 100%;
-            width: 90%;
-            border: 2px solid black;
-            box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.404);
+            height: 200px;
+            top: -15%;
+            width: 95%;
+            border: 0px solid black;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.404);
             padding: 10px 10px;
+            resize: none;
             &:focus {
               outline: none;
             }
@@ -177,7 +184,7 @@
         }
         .submit-message {
           position: absolute;
-          bottom: 0%;
+          bottom: -10%;
           right: 5%;
           padding: 10px 50px;
           background: none;
@@ -200,7 +207,7 @@
 
   100% {
     opacity: 0;
-    transform: translateY(-900px);
+    transform: translateY(-600px);
   }
 }
 @-webkit-keyframes AnimationName {

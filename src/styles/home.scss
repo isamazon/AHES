@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   background: whitesmoke;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 
   .landingpage-bg {
     position: absolute;
@@ -48,20 +48,21 @@
       display: flex;
       flex-direction: column;
       @media screen and (max-width: 1300px) {
-        width: 100%;
         top: 0%;
         background: none;
         height: 100%;
+        align-items: center;
       }
       .welcome-h1 {
         position: relative;
         left: 15%;
         top: 20%;
-        font-size: 60px;
+        font-size: 50px;
         font-weight: 700;
-        width: 90%;
+        width: 80%;
         padding: 0px 0px;
         background: none;
+        animation: fade-down 2s;
         @media screen and (max-width: 1300px) {
           display: flex;
           justify-content: center;
@@ -71,18 +72,39 @@
           padding: 0px 50px;
           text-align: center;
         }
+        @media screen and (max-width: 650px) {
+          font-size: 35px;
+          padding: 0px 0px;
+        }
       }
       .link-container {
         position: relative;
         top: 20%;
-        left: 15%;
+        left: 0%;
         display: flex;
+        background: none;
+        width: 100%;
+        height: 30%;
         flex-direction: row;
+        justify-content: center;
         padding: 50px 0px;
+        @media screen and (max-width: 900px) {
+          left: 0%;
+          top: 10%;
+          align-items: center;
+          justify-content: center;
+          padding: 0px 0px;
+        }
+        @media screen and (max-width: 450px) {
+          flex-direction: column-reverse;
+          justify-content: space-evenly;
+          top: 15%;
+        }
         .link-1 {
           position: relative;
           margin-right: 20px;
 
+          animation: fade-up 2s;
           .button-1 {
             background: #d43a57;
             border: 0px solid black;
@@ -93,17 +115,23 @@
             box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.432);
             text-transform: uppercase;
             font-weight: 500;
+            width: 100%;
+
             &:hover {
               background: #0da0f2;
-              transform: translateY(-15px);
+
               box-shadow: 0px 20px 5px rgba(0, 0, 0, 0.384);
             }
           }
           .about-btn {
+            position: relative;
+
             background: #0da0f2;
             transition: 0.5s;
             &:hover {
               background: #d43a57;
+              text-decoration: none;
+              cursor: pointer;
             }
           }
         }
@@ -262,11 +290,19 @@
         font-weight: 900;
         text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.171);
         font-size: 50px;
+        @media screen and (max-width: 1700px) {
+          font-size: 40px;
+          text-align: center;
+        }
       }
       .newsletter-p {
         color: #0da0f2;
         font-size: 20px;
         padding: 20px 20px;
+        @media screen and (max-width: 1700px) {
+          padding: 20px 20px;
+          text-align: center;
+        }
       }
       .subscribe-form {
         position: relative;
@@ -279,6 +315,9 @@
         background: none;
         @media screen and (max-width: 1300px) {
           justify-content: center;
+        }
+        @media screen and (max-width: 1050px) {
+          flex-direction: column;
         }
         .subscribe-email {
           position: relative;
@@ -299,6 +338,9 @@
             border: 4px solid #0da0f2;
             outline: none;
           }
+          @media screen and (max-width: 1050px) {
+            margin-right: 0px;
+          }
         }
         .submit-button {
           position: relative;
@@ -316,6 +358,11 @@
             background: #0da0f2;
             color: #d43a57;
             border: 2px solid #0da0f2;
+          }
+          @media screen and (max-width: 1050px) {
+            width: 40%;
+            top: 20px;
+            border: 2px solid black;
           }
         }
       }
@@ -348,6 +395,26 @@
 }
 #letter {
   animation: downtoup 10s infinite ease-in-out;
+}
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 @keyframes downtoup {
   0% {

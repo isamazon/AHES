@@ -41,7 +41,7 @@ function Login() {
       <Nav />
       <div className="login-form-cnt">
         <img src={Logo} className="top-logo" alt="" />
-        <h1 className="login-h1">Login</h1>
+        <h1 className="login-h1"></h1>
         <form onSubmit={(e) => handleSubmitForm(e)} className="form">
           <input
             ref={username}

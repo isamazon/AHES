@@ -9,7 +9,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import "../styles/nav.css";
 // images
 import logo from "../assets/logo.png";
-function Nav() {
+function Nav(props) {
   const [click, setClick] = useState(false);
 
   // Active navbar stat

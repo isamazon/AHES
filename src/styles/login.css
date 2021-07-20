@@ -2,10 +2,11 @@
 .login-container {
   position: relative;
   height: 100vh;
-  background: linear-gradient(1deg, #00a3ff, #e60505, #76e6ff, #00aef0, #d41010);
+  background: -webkit-gradient(linear, right top, left top, from(#00a3ff), color-stop(#e60505), color-stop(#76e6ff), color-stop(#00aef0), to(#d41010));
+  background: linear-gradient(270deg, #00a3ff, #e60505, #76e6ff, #00aef0, #d41010);
   background-size: 1000% 1000%;
-  -webkit-animation: AnimationName 20s ease infinite;
-  animation: AnimationName 20s ease infinite;
+  -webkit-animation: AnimationName 18s ease infinite;
+  animation: AnimationName 18s ease infinite;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,8 +20,8 @@
 
 .login-container .login-form-cnt {
   position: relative;
-  height: 1000px;
-  width: 800px;
+  height: 750px;
+  width: 600px;
   border-radius: 30px;
   background: whitesmoke;
   display: -webkit-box;
@@ -48,7 +49,7 @@
   position: absolute;
   height: 400px;
   width: 400px;
-  top: -20%;
+  top: -26%;
   z-index: 3;
 }
 
@@ -148,25 +149,25 @@
 
 @-webkit-keyframes AnimationName {
   0% {
-    background-position: 92% 0%;
+    background-position: 0% 50%;
   }
   50% {
-    background-position: 9% 100%;
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 92% 0%;
+    background-position: 0% 50%;
   }
 }
 
 @keyframes AnimationName {
   0% {
-    background-position: 92% 0%;
+    background-position: 0% 50%;
   }
   50% {
-    background-position: 9% 100%;
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 92% 0%;
+    background-position: 0% 50%;
   }
 }
 /*# sourceMappingURL=login.css.map */

@@ -46,6 +46,7 @@ function Sales(props) {
                 <Col
                   xl={4}
                   md={6}
+                  sm={12}
                   key={x}
                   className=""
                   onClick={() => setClickedPhoto(x)}

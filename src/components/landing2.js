@@ -13,9 +13,9 @@ import Letter from "./SVGS/letter";
 import Star from "./SVGS/star";
 import Redstar from "./SVGS/redstar";
 import Bluestar from "./SVGS/bluestar";
-function Landing2() {
+function Landing2(props) {
   return (
-    <Container fluid className="about-section">
+    <Container fluid className="about-section" id={props.scrollanchor}>
       <div className="topwave"></div>
       <Row className="about-row">
         <Infobox
@@ -83,9 +83,7 @@ function Landing2() {
               placeholder="Enter your email here"
               type="email"
             />
-            <button className="submit-button" type="submit">
-              Submit
-            </button>
+            <input className="submit-button" type="submit" />
           </form>
         </Col>
         <Col xl={6} md={12} className="subscribe-col">

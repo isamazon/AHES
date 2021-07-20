@@ -34,6 +34,12 @@
   }
 }
 
+@media screen and (max-height: 840px) {
+  .nav {
+    background-color: white;
+  }
+}
+
 .nav .brand {
   position: absolute;
   color: black;
@@ -107,7 +113,7 @@ nav.active {
   color: black;
   font-family: sans-serif;
   font-weight: 200;
-  font-size: 20px;
+  font-size: 15px;
   letter-spacing: 2px;
   text-decoration: none;
   padding: 5px 20px;
@@ -116,6 +122,25 @@ nav.active {
 }
 
 .nav-links:hover {
+  text-decoration: none;
+  color: black;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.nav-links-white {
+  color: white;
+  font-family: sans-serif;
+  font-weight: 200;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  padding: 5px 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.nav-links-white:hover {
   text-decoration: none;
   color: black;
   -webkit-transform: translateY(-5px);

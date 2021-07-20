@@ -101,15 +101,15 @@ app.put("/api/file", (req, res) => {
   if (is_(base64)) {
     fs.writeFile(directoryPath + newTitle, base64, "base64", (err) => {
       if (err) {
-        console.log("something fucked up you jerg askdijsiofjasf");
-        return res.json({ status: "failure... oniiichan messed up >///<" });
+        console.log("something went wrong lol oWo");
+        return res.json({ status: "failure... " });
       }
       console.log("owo it is a base64");
-      res.json({ status: "success... owo" });
+      res.json({ status: "success... " });
     });
   } else {
-    console.log("not base64 uwu");
-    res.json({ status: "senpai it's not a base64 image." });
+    console.log("not base64 ");
+    res.json({ status: "it's not a base64 image." });
   }
 });
 
@@ -125,6 +125,10 @@ app.delete("/api/file/:file", (req, res) => {
       status: "deleted successfully",
     });
   });
+});
+
+app.get("/favico.ico", (req, res) => {
+  res.sendStatus(404);
 });
 
 // Starting Application

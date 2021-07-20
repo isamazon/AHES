@@ -31,6 +31,9 @@ $font3: "Ceviche One", cursive;
   @media screen and (max-width: 1000px) {
     background-color: whitesmoke;
   }
+  @media screen and (max-height: 840px) {
+    background-color: white;
+  }
 
   .brand {
     position: absolute;
@@ -90,7 +93,22 @@ nav.active {
   color: black;
   font-family: sans-serif;
   font-weight: 200;
-  font-size: 20px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  padding: 5px 20px;
+  transition: 0.5s;
+  &:hover {
+    text-decoration: none;
+    color: black;
+    transform: translateY(-5px);
+  }
+}
+.nav-links-white {
+  color: white;
+  font-family: sans-serif;
+  font-weight: 200;
+  font-size: 15px;
   letter-spacing: 2px;
   text-decoration: none;
   padding: 5px 20px;
