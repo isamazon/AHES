@@ -33,11 +33,14 @@ function Sales(props) {
         <Row className="row-1">
           <h1 className="sale-h1">Items for sale!</h1>
           <p className="description-p">{value}</p>
-          <div className="photo-container">
+          <div className={clickedPhoto ? "photomodal" : "photo-container"}>
             {clickedPhoto.length > 0 ? (
               <div>
-                <button onClick={() => setClickedPhoto("")}>X</button>
+                <div onClick={() => setClickedPhoto("")} className="exit-btn">
+                  X
+                </div>
                 <img
+                  className="enlarged-photo"
                   src={`https://hot-potatoes.herokuapp.com/api/file/${clickedPhoto}`}
                 />
               </div>

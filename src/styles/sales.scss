@@ -5,12 +5,19 @@ $font-1: "Anton", sans-serif;
   position: relative;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: url("../assets/salesbg1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
+  overflow-y: auto;
+  @media screen and (max-height: 830px) {
+    height: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
   @media screen and (max-width: 900px) {
     height: 100%;
   }
@@ -22,6 +29,9 @@ $font-1: "Anton", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media screen and (max-width: 900px) {
+      top: 20%;
+    }
     .sale-h1 {
       position: relative;
       top: 5%;
@@ -34,33 +44,43 @@ $font-1: "Anton", sans-serif;
       font-family: $font-1;
       text-transform: uppercase;
       z-index: 1;
+      @media screen and (max-width: 500px) {
+        font-size: 40px;
+        top: 15%;
+      }
     }
     .description-p {
       position: relative;
-      width: 80%;
+      width: 90%;
       top: 0%;
-      font-size: 25px;
-      padding: 50px 0px;
+      font-size: 20px;
+      padding: 50px;
+      padding-top: 20px;
       height: 200px;
       overflow-y: auto;
       font-weight: 600;
-      text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.295);
       text-align: center;
+      display: flex;
+
       background: rgba(255, 255, 255, 0.35);
       box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.404);
       backdrop-filter: blur(17px);
       -webkit-backdrop-filter: blur(17px);
-
       border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 50px;
+      border-radius: 20px;
+      @media screen and (max-width: 1300px) {
+        font-size: 15px;
+        padding: 10px;
+        padding-top: 20px;
+      }
     }
     .photo-container {
       position: relative;
       background: rgba(255, 255, 255, 0.35);
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
       backdrop-filter: blur(17px);
       -webkit-backdrop-filter: blur(17px);
-      border-radius: 20px;
+      border-radius: 10px;
       border: 1px solid rgba(255, 255, 255, 0.18);
       top: 0%;
       padding: 50px 0px;
@@ -69,14 +89,75 @@ $font-1: "Anton", sans-serif;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      overflow-y: auto;
+      overflow-y: scroll;
+      @media screen and (max-height: 830px) {
+        height: 600px;
+      }
+      @media screen and (max-width: 900px) {
+        height: 600px;
+        width: 100%;
+      }
       .item-photos {
         position: relative;
         height: 100%;
         width: 100%;
         padding-bottom: 20px;
         border-radius: 10px;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
+    .photomodal {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+      animation: fadeintoview 0.5s;
+      .exit-btn {
+        position: absolute;
+        top: 15%;
+        right: 15%;
+        z-index: 500;
+        color: white;
+        height: 50px;
+        width: 50px;
+        border: 2px solid black;
+        border-radius: 50%;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+        &:hover {
+          background: none;
+          color: black;
+          cursor: pointer;
+        }
+      }
+      .enlarged-photo {
+        position: absolute;
+        height: 60%;
+        width: 60%;
+        background: none;
+        border-radius: 20px;
+        box-shadow: 0px 5px 20px black;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.5s;
+      }
+    }
+  }
+}
+@keyframes fadeintoview {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

@@ -53,7 +53,7 @@ function Nav(props) {
           </Link>
         </li> */}
         {/* Dropdown 2 */}
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <Link
             to="/Femaleshounen"
             className="nav-links"
@@ -61,7 +61,7 @@ function Nav(props) {
           >
             Services
           </Link>
-        </li>
+        </li> */}
         <li className="nav-item">
           <Link to="/Sales" className="nav-links" onClick={closeMobileMenu}>
             Upcoming Sales

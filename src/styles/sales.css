@@ -5,6 +5,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -15,6 +19,15 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
+  overflow-y: auto;
+}
+
+@media screen and (max-height: 830px) {
+  .gallery-cont {
+    height: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -40,6 +53,12 @@
           align-items: center;
 }
 
+@media screen and (max-width: 900px) {
+  .gallery-cont .row-1 {
+    top: 20%;
+  }
+}
+
 .gallery-cont .row-1 .sale-h1 {
   position: relative;
   top: 5%;
@@ -54,34 +73,52 @@
   z-index: 1;
 }
 
+@media screen and (max-width: 500px) {
+  .gallery-cont .row-1 .sale-h1 {
+    font-size: 40px;
+    top: 15%;
+  }
+}
+
 .gallery-cont .row-1 .description-p {
   position: relative;
-  width: 80%;
+  width: 90%;
   top: 0%;
-  font-size: 25px;
-  padding: 50px 0px;
+  font-size: 20px;
+  padding: 50px;
+  padding-top: 20px;
   height: 200px;
   overflow-y: auto;
   font-weight: 600;
-  text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.295);
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background: rgba(255, 255, 255, 0.35);
   -webkit-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.404);
           box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.404);
   backdrop-filter: blur(17px);
   -webkit-backdrop-filter: blur(17px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 50px;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 1300px) {
+  .gallery-cont .row-1 .description-p {
+    font-size: 15px;
+    padding: 10px;
+    padding-top: 20px;
+  }
 }
 
 .gallery-cont .row-1 .photo-container {
   position: relative;
   background: rgba(255, 255, 255, 0.35);
-  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   backdrop-filter: blur(17px);
   -webkit-backdrop-filter: blur(17px);
-  border-radius: 20px;
+  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   top: 0%;
   padding: 50px 0px;
@@ -96,7 +133,20 @@
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  overflow-y: auto;
+  overflow-y: scroll;
+}
+
+@media screen and (max-height: 830px) {
+  .gallery-cont .row-1 .photo-container {
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .gallery-cont .row-1 .photo-container {
+    height: 600px;
+    width: 100%;
+  }
 }
 
 .gallery-cont .row-1 .photo-container .item-photos {
@@ -105,5 +155,87 @@
   width: 100%;
   padding-bottom: 20px;
   border-radius: 10px;
+}
+
+.gallery-cont .row-1 .photo-container .item-photos:hover {
+  cursor: pointer;
+}
+
+.gallery-cont .row-1 .photomodal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 100;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  -webkit-animation: fadeintoview 0.5s;
+          animation: fadeintoview 0.5s;
+}
+
+.gallery-cont .row-1 .photomodal .exit-btn {
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  z-index: 500;
+  color: white;
+  height: 50px;
+  width: 50px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.gallery-cont .row-1 .photomodal .exit-btn:hover {
+  background: none;
+  color: black;
+  cursor: pointer;
+}
+
+.gallery-cont .row-1 .photomodal .enlarged-photo {
+  position: absolute;
+  height: 60%;
+  width: 60%;
+  background: none;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 5px 20px black;
+          box-shadow: 0px 5px 20px black;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@-webkit-keyframes fadeintoview {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeintoview {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=sales.css.map */
