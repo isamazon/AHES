@@ -1,4 +1,5 @@
 import React from "react";
+import emailjs from "emailjs-com";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaPhoneAlt } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
@@ -12,6 +13,25 @@ import Star1 from "../SVGS/bluestar";
 import Star2 from "../SVGS/redstar";
 import Star3 from "../SVGS/star";
 function Contact() {
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_l1qn4qb",
+        "template_54bvllb",
+        e.target,
+        "user_JND4DxYErSVDiRhTJiVVb"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  }
   return (
     <div>
       <Nav />
@@ -53,15 +73,17 @@ function Contact() {
           </Col>
           <Col xl={8} className="contact-form-col">
             <img src={Logo} className="logo" alt="" />
-            <form action="">
+            <form onSubmit={sendEmail}>
               <div className="name-inputs">
                 <input
                   type="text"
                   placeholder="First name"
+                  name="name"
                   className="name-input"
                 />
                 <input
                   type="text"
+                  name="lastname"
                   placeholder="Last name"
                   className="name-input"
                 />
@@ -69,13 +91,19 @@ function Contact() {
               <div className="name-inputs">
                 <input
                   type="text"
+                  name="subject"
                   placeholder="Subject"
                   className="name-input"
                 />
-                <input type="text" placeholder="Email" className="name-input" />
+                <input
+                  type="text"
+                  placeholder="Email"
+                  name="email"
+                  className="name-input"
+                />
               </div>
               <div className="name-inputs">
-                <textarea className="textbox" />
+                <textarea className="textbox" name="message" />
               </div>
               <input
                 type="submit"

@@ -83,7 +83,7 @@ function Landing2(props) {
               placeholder="Enter your email here"
               type="email"
             />
-            <input className="submit-button" type="submit" />
+            <input className="submit-button" type="submit" value="subscribe!" />
           </form>
         </Col>
         <Col xl={6} md={12} className="subscribe-col">
