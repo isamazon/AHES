@@ -381,6 +381,36 @@
     }
   }
 }
+// Scroll to top btn
+.scroll-up-btn-ctn {
+  position: fixed;
+  width: 60px;
+  right: 10px;
+  height: 60px;
+  bottom: 10px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  color: red;
+  animation: fadein 1s;
+
+  .arrow-up {
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      transform: translateY(-5px);
+      color: #0da0f2;
+    }
+  }
+}
+.scroll-up-btn-hidden {
+  display: none;
+  transition: 0.5;
+  animation: fadeout 1s;
+}
 #bluestar,
 #star,
 #redstar {

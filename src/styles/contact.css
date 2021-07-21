@@ -35,7 +35,10 @@
   position: relative;
   height: 100%;
   border-radius: 20px;
-  background: #000000;
+  background: url("../assets/AmericanFlag.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   left: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,8 +48,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   z-index: 1;
-  -webkit-box-shadow: 0px 5px 10px black;
-          box-shadow: 0px 5px 10px black;
+  -webkit-box-shadow: inset 0px 5px 300px black;
+          box-shadow: inset 0px 5px 300px black;
 }
 
 .contact-container .contact-row .contact-info-col h1 {
@@ -57,6 +60,7 @@
   padding: 0px 10px;
   width: 100%;
   z-index: 1;
+  text-shadow: 0px 5px 10px black;
 }
 
 .contact-container .contact-row .contact-info-col p {
@@ -118,8 +122,8 @@
 
 .contact-container .contact-row .contact-info-col .stars .star2 {
   left: 50%;
-  -webkit-animation: down2up 4s infinite linear;
-          animation: down2up 4s infinite linear;
+  -webkit-animation: down2up 3.5s infinite linear;
+          animation: down2up 3.5s infinite linear;
 }
 
 .contact-container .contact-row .contact-info-col .stars .star3 {
@@ -130,8 +134,8 @@
 
 .contact-container .contact-row .contact-info-col .stars .star4 {
   left: 80%;
-  -webkit-animation: down2up 8s infinite linear;
-          animation: down2up 8s infinite linear;
+  -webkit-animation: down2up 6s infinite linear;
+          animation: down2up 6s infinite linear;
 }
 
 .contact-container .contact-row .contact-info-col .stars .star5 {

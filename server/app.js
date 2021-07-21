@@ -29,6 +29,7 @@ const db = new sqlite3.Database("./owo.db", sqlite3.OPEN_READWRITE, (err) => {
 const serializeError = () => {
   db.serialize(() => {
     db.run("CREATE TABLE dbowo(description text)");
+    db.run("CREATE TABLE emailList(email tex");
   });
 };
 

@@ -29,12 +29,16 @@
       position: relative;
       height: 100%;
       border-radius: 20px;
-      background: #000000;
+      background: url("../assets/AmericanFlag.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
       left: 20px;
       display: flex;
       flex-direction: column;
       z-index: 1;
-      box-shadow: 0px 5px 10px black;
+      box-shadow: inset 0px 5px 300px black;
+
       h1 {
         position: relative;
         color: white;
@@ -43,6 +47,7 @@
         padding: 0px 10px;
         width: 100%;
         z-index: 1;
+        text-shadow: 0px 5px 10px black;
       }
       p {
         position: relative;
@@ -88,7 +93,7 @@
         }
         .star2 {
           left: 50%;
-          animation: down2up 4s infinite linear;
+          animation: down2up 3.5s infinite linear;
         }
         .star3 {
           left: 30%;
@@ -96,7 +101,7 @@
         }
         .star4 {
           left: 80%;
-          animation: down2up 8s infinite linear;
+          animation: down2up 6s infinite linear;
         }
         .star5 {
           left: 65%;

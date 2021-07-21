@@ -6,7 +6,7 @@ import landingpage from "../assets/landingpage.png";
 import Aboutbtn from "./aboutbtn";
 function Landingpage(props) {
   return (
-    <Container fluid className="landing-page-cnt">
+    <Container fluid className="landing-page-cnt" id={props.topid}>
       <div className="landingpage-bg"></div>
       <Row className="row-1">
         <Col xl={7} lg={12} sm={12} xs={12} className="col-1">
