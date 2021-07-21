@@ -1,7 +1,7 @@
 {
-  "name": "kaladin-backend",
+  "name": "ahes-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "A backend for American house hold estate sales",
   "engines": {
     "node": "14.15.0"
   },

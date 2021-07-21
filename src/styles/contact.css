@@ -35,10 +35,8 @@
   position: relative;
   height: 100%;
   border-radius: 20px;
-  background: url("../assets/AmericanFlag.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: #df122e;
+  background: linear-gradient(147deg, #df122e 10%, #00d4ff 87%);
   left: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,8 +46,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   z-index: 1;
-  -webkit-box-shadow: inset 0px 5px 300px black;
-          box-shadow: inset 0px 5px 300px black;
+  -webkit-box-shadow: -10px 5px 20px black;
+          box-shadow: -10px 5px 20px black;
 }
 
 .contact-container .contact-row .contact-info-col h1 {
@@ -166,7 +164,7 @@
 .contact-container .contact-row .contact-form-col .logo {
   position: absolute;
   z-index: 0;
-  top: -35%;
+  top: -43%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -178,7 +176,8 @@
 
 .contact-container .contact-row .contact-form-col form {
   position: relative;
-  height: 80%;
+  height: 100%;
+  top: 0%;
   background: none;
   width: 100%;
   z-index: 2;
@@ -233,8 +232,8 @@
 
 .contact-container .contact-row .contact-form-col form .name-inputs .textbox {
   position: relative;
-  height: 200px;
-  top: -15%;
+  height: 150px;
+  top: -30%;
   width: 95%;
   border: 0px solid black;
   -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.404);
@@ -249,10 +248,17 @@
 
 .contact-container .contact-row .contact-form-col form .submit-message {
   position: absolute;
-  bottom: -10%;
+  bottom: 5%;
   right: 5%;
   padding: 10px 50px;
   background: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contact-container .contact-row .contact-form-col form .submit-message:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 @-webkit-keyframes down2up {

@@ -25,7 +25,7 @@ function Scrolltop(props) {
         spy={true}
         smooth={true}
       >
-        <FaArrowCircleUp size="50px" className={props.arrowup} />
+        <FaArrowCircleUp size="70px" className={props.arrowup} />
       </Link>
     </div>
   );
