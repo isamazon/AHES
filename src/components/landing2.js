@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Infobox from "./infobox";
+import Subscribe from "./subscribe";
 // images
 import money from "../assets/money2.png";
 import question from "../assets/question2.png";
@@ -70,22 +71,7 @@ function Landing2(props) {
         <div className="star6" id="star2">
           <Bluestar height="85px" />
         </div>
-        <Col xl={6} md={12} className="info-mail">
-          <h1 className="newsletter-h1">Subscribe to our newsletter!</h1>
-          <p className="newsletter-p">
-            Get an advantage by subscribing to our newsletter to get weekly
-            updates on whats up for sale!
-          </p>
-          <form className="subscribe-form">
-            <input
-              className="subscribe-email"
-              name="email"
-              placeholder="Enter your email here"
-              type="email"
-            />
-            <input className="submit-button" type="submit" value="subscribe!" />
-          </form>
-        </Col>
+        <Subscribe />
         <Col xl={6} md={12} className="subscribe-col">
           <Letter width="80%" />
         </Col>
