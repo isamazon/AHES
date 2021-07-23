@@ -44,6 +44,9 @@ if (!fs.existsSync(directoryPath)) {
   fs.mkdirSync(directoryPath);
 }
 
+app.get("/", (req, res) => {
+  res.send("HI WORKING");
+});
 // Gets the description
 app.get("/api/description", (req, res) => {
   db.all(`SELECT description FROM dbowo`, [], (err, result) => {
