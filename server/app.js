@@ -5,6 +5,7 @@ const cors = require("cors");
 const fs = require("fs");
 const sqlite3 = require("sqlite3").verbose();
 const path = require("path");
+const Mailchimp = require("mailchimp-api-v3");
 
 // Images Directory
 const directoryPath = path.join(__dirname, "images/");
@@ -130,6 +131,29 @@ app.delete("/api/file/:file", (req, res) => {
 
 app.get("/favico.ico", (req, res) => {
   res.sendStatus(404);
+});
+
+// Mailchimp
+require("dotenv/config");
+const mc_api = process.env.MAILCHIMP_API_KEY;
+const list_id = process.env.LIST_ID;
+
+// require("dotenv").config({ path: __dirname + "/variables.env" });
+const mailchimp = new Mailchimp(mc_api);
+
+// API endpoint
+app.get("/api/memberAdd", (req, res) => {
+  mailchimp
+    .post(`/lists/${list_id}/members/`, {
+      email_address: req.query.email,
+      status: "subscribed",
+    })
+    .then((res) => {
+      res.json(res);
+    })
+    .catch((err) => {
+      res.send(err);
+    });
 });
 
 // Starting Application

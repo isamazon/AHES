@@ -14,12 +14,13 @@ function Subscribe() {
     e.preventDefault();
 
     if (state.email) {
-      fetch(`/api/memberAdd?email=${state.email}`)
+      fetch(`http://localhost:5000/api/memberAdd?email=${state.email}`)
         .then((res) => res.json())
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
     }
   };
+
   return (
     <Col xl={6} md={12} className="info-mail">
       <h1 className="newsletter-h1">Subscribe to our newsletter!</h1>
