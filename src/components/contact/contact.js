@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import emailjs from "emailjs-com";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -8,6 +8,8 @@ import { AiOutlineMail } from "react-icons/ai";
 import "../../styles/contact.css";
 import Logo from "../../assets/logo.png";
 import Nav from "../nav";
+import AOS from "aos";
+import "aos/dist/aos.css";
 // Stars
 import Star1 from "../SVGS/bluestar";
 import Star2 from "../SVGS/redstar";
@@ -32,11 +34,18 @@ function Contact() {
         }
       );
   }
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div>
       <Nav />
       <Container fluid className="contact-container">
-        <Row className="contact-row">
+        <Row
+          className="contact-row"
+          data-aos="fade-down"
+          data-aos-duration="1500"
+        >
           <Col xl={4} className="contact-info-col">
             <h1>Contact information</h1>
             <p>

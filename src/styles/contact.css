@@ -31,12 +31,17 @@
           flex-direction: row;
 }
 
+@media screen and (max-height: 850px) {
+  .contact-container .contact-row {
+    height: 550px;
+  }
+}
+
 .contact-container .contact-row .contact-info-col {
   position: relative;
   height: 100%;
   border-radius: 20px;
-  background: #df122e;
-  background: linear-gradient(147deg, #df122e 10%, #00d4ff 87%);
+  background: black;
   left: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,6 +53,12 @@
   z-index: 1;
   -webkit-box-shadow: -10px 5px 20px black;
           box-shadow: -10px 5px 20px black;
+}
+
+@media screen and (max-width: 1200px) {
+  .contact-container .contact-row .contact-info-col {
+    display: none;
+  }
 }
 
 .contact-container .contact-row .contact-info-col h1 {
@@ -161,6 +172,13 @@
           box-shadow: 0px 5px 20px black;
 }
 
+@media screen and (max-width: 1200px) {
+  .contact-container .contact-row .contact-form-col {
+    border-radius: 20px;
+    padding-bottom: 50px;
+  }
+}
+
 .contact-container .contact-row .contact-form-col .logo {
   position: absolute;
   z-index: 0;
@@ -172,6 +190,20 @@
 .contact-container .contact-row .contact-form-col .logo:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
+}
+
+@media screen and (max-height: 850px) {
+  .contact-container .contact-row .contact-form-col .logo {
+    top: -50%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .contact-container .contact-row .contact-form-col .logo {
+    height: 300px;
+    width: 300px;
+    top: -30%;
+  }
 }
 
 .contact-container .contact-row .contact-form-col form {
@@ -197,6 +229,16 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-height: 850px) {
+  .contact-container .contact-row .contact-form-col form .name-inputs {
+    height: 150px;
+    top: 15%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .contact-container .contact-row .contact-form-col form .name-inputs .name-input {
@@ -246,9 +288,16 @@
   outline: none;
 }
 
+@media screen and (max-height: 1639px) {
+  .contact-container .contact-row .contact-form-col form .name-inputs .textbox {
+    height: 150px;
+    top: -45%;
+  }
+}
+
 .contact-container .contact-row .contact-form-col form .submit-message {
   position: absolute;
-  bottom: 5%;
+  top: 80%;
   right: 5%;
   padding: 10px 50px;
   background: none;
@@ -259,6 +308,27 @@
 .contact-container .contact-row .contact-form-col form .submit-message:hover {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
+}
+
+@media screen and (max-height: 850px) {
+  .contact-container .contact-row .contact-form-col form .submit-message {
+    padding: 10px 50px;
+    height: 50px;
+    top: 90%;
+  }
+  .contact-container .contact-row .contact-form-col form .submit-message:hover {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contact-container .contact-row .contact-form-col form .submit-message {
+    border-radius: 20px;
+    top: 95%;
+    width: 100%;
+    right: 0;
+  }
 }
 
 @-webkit-keyframes down2up {

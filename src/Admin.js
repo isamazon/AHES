@@ -15,12 +15,10 @@ function Admin() {
   const history = useHistory();
 
   const fetchInitialText = () => {
-    axios
-      .get("https://hot-potatoes.herokuapp.com/api/description")
-      .then((data) => {
-        setTextBoxValue(data.data);
-        console.log(data);
-      });
+    axios.get("https://backend.shounenfit.com/api/description").then((data) => {
+      setTextBoxValue(data.data);
+      console.log(data);
+    });
   };
 
   const handleSubmit = (e) => {
@@ -30,7 +28,7 @@ function Admin() {
       description: currentTextValue.current.value,
     };
     axios
-      .put("https://hot-potatoes.herokuapp.com/api/description", object)
+      .put("https://backend.shounenfit.com/api/description", object)
       .then(fetchInitialText());
   };
 

@@ -25,22 +25,22 @@
     background: none;
     display: flex;
     flex-direction: row;
+    @media screen and (max-height: 850px) {
+      height: 550px;
+    }
     .contact-info-col {
       position: relative;
       height: 100%;
       border-radius: 20px;
-      background: rgb(223, 18, 46);
-      background: linear-gradient(
-        147deg,
-        rgba(223, 18, 46, 1) 10%,
-        rgba(0, 212, 255, 1) 87%
-      );
+      background: black;
       left: 20px;
       display: flex;
       flex-direction: column;
       z-index: 1;
       box-shadow: -10px 5px 20px black;
-
+      @media screen and (max-width: 1200px) {
+        display: none;
+      }
       h1 {
         position: relative;
         color: white;
@@ -121,6 +121,10 @@
       border-top-right-radius: 20px;
       border-bottom-right-radius: 20px;
       box-shadow: 0px 5px 20px black;
+      @media screen and (max-width: 1200px) {
+        border-radius: 20px;
+        padding-bottom: 50px;
+      }
       .logo {
         position: absolute;
         z-index: 0;
@@ -128,6 +132,14 @@
         transition: 0.5s;
         &:hover {
           transform: translateY(-5px);
+        }
+        @media screen and (max-height: 850px) {
+          top: -50%;
+        }
+        @media screen and (max-width: 550px) {
+          height: 300px;
+          width: 300px;
+          top: -30%;
         }
       }
       form {
@@ -145,6 +157,11 @@
           display: flex;
           justify-content: space-evenly;
           align-items: center;
+          @media screen and (max-height: 850px) {
+            height: 150px;
+            top: 15%;
+            align-items: flex-start;
+          }
           .name-input {
             position: relative;
             border: 0px;
@@ -188,17 +205,35 @@
             &:focus {
               outline: none;
             }
+            @media screen and (max-height: 1639px) {
+              height: 150px;
+              top: -45%;
+            }
           }
         }
         .submit-message {
           position: absolute;
-          bottom: 5%;
+          top: 80%;
           right: 5%;
           padding: 10px 50px;
           background: none;
           transition: 0.5s;
           &:hover {
             transform: translateY(-10px);
+          }
+          @media screen and (max-height: 850px) {
+            padding: 10px 50px;
+            height: 50px;
+            top: 90%;
+            &:hover {
+              transform: translateY(0px);
+            }
+          }
+          @media screen and (max-width: 1200px) {
+            border-radius: 20px;
+            top: 95%;
+            width: 100%;
+            right: 0;
           }
         }
       }

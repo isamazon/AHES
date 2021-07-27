@@ -3,7 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import Nav from "./components/nav";
 import "./styles/sales.css";
 import axios from "axios";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 function Sales(props) {
   const [value, setValue] = useState("");
   const [photos, setPhotos] = useState([]);
@@ -11,13 +12,13 @@ function Sales(props) {
 
   const fetchData = () => {
     axios
-      .get("https://hot-potatoes.herokuapp.com/api/description")
+      .get("https://backend.shounenfit.com/api/description")
       .then((data) => setValue(data.data));
   };
 
   const fetchPhotos = () => {
     axios
-      .get("https://hot-potatoes.herokuapp.com/api/file")
+      .get("https://backend.shounenfit.com/api/file")
       .then((data) => setPhotos(data.data));
   };
 
@@ -26,13 +27,25 @@ function Sales(props) {
     fetchPhotos();
   }, []);
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div>
       <Nav />
       <Container fluid className="gallery-cont">
         <Row className="row-1">
-          <h1 className="sale-h1">Items for sale!</h1>
-          <p className="description-p">{value}</p>
+          <h1 className="sale-h1" data-aos="fade-down" data-aos-duration="1500">
+            Items for sale!
+          </h1>
+          <p
+            className="description-p"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            {value}
+          </p>
           <div className={clickedPhoto ? "photomodal" : "photo-container"}>
             {clickedPhoto.length > 0 ? (
               <div>
@@ -41,7 +54,7 @@ function Sales(props) {
                 </div>
                 <img
                   className="enlarged-photo"
-                  src={`https://hot-potatoes.herokuapp.com/api/file/${clickedPhoto}`}
+                  src={`https://backend.shounenfit.com/api/file/${clickedPhoto}`}
                 />
               </div>
             ) : (
@@ -55,7 +68,7 @@ function Sales(props) {
                   onClick={() => setClickedPhoto(x)}
                 >
                   <img
-                    src={`https://hot-potatoes.herokuapp.com/api/file/${x}`}
+                    src={`https://backend.shounenfit.com/api/file/${x}`}
                     className="item-photos"
                     alt="photos"
                   />

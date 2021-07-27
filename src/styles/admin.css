@@ -55,6 +55,12 @@
           align-items: center;
 }
 
+@media screen and (max-width: 1600px) {
+  .admin-container .row-1 {
+    width: 100%;
+  }
+}
+
 .admin-container .row-1 .textbox-col {
   position: relative;
   height: 100%;
@@ -100,6 +106,12 @@
   overflow-y: auto;
 }
 
+@media screen and (max-width: 1600px) {
+  .admin-container .row-1 .textbox-col form {
+    width: 100%;
+  }
+}
+
 .admin-container .row-1 .textbox-col form .input-box {
   position: relative;
   width: 600px;
@@ -111,6 +123,12 @@
   border-radius: 20px;
   text-align: top;
   color: white;
+}
+
+@media screen and (max-width: 1600px) {
+  .admin-container .row-1 .textbox-col form .input-box {
+    width: 100%;
+  }
 }
 
 .admin-container .row-1 .textbox-col form .input-box:focus {
@@ -154,6 +172,12 @@
   border: 2px solid black;
   color: white;
   overflow-y: auto;
+}
+
+@media screen and (max-width: 1600px) {
+  .admin-container .row-1 .description-p {
+    width: 400px;
+  }
 }
 
 .admin-container .row-1 .photo-col {
@@ -220,6 +244,12 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   overflow-y: auto;
+}
+
+@media screen and (max-width: 1600px) {
+  .admin-container .row-1 .photo-col .photo-cont {
+    width: 600px;
+  }
 }
 
 .admin-container .row-1 .photo-col .photo-cont .images {
@@ -303,22 +333,26 @@
 @-webkit-keyframes loadin {
   0% {
     opacity: 0;
-    top: 5%;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
   }
   100% {
     opacity: 1;
-    top: 10%;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 
 @keyframes loadin {
   0% {
     opacity: 0;
-    top: 5%;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
   }
   100% {
     opacity: 1;
-    top: 10%;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 /*# sourceMappingURL=admin.css.map */
