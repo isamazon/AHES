@@ -54,13 +54,13 @@ function Contact() {
             </p>
             <ul className="contact-list">
               <li className="list-item">
-                <AiOutlineMail /> Email: exampleemail1234@gmail.com
+                <AiOutlineMail /> Email: amerestatesales@gmail.com
               </li>
-              <li className="list-item">
+              {/* <li className="list-item">
                 <FaPhoneAlt />
                 Phone:
               </li>
-              <li className="list-item">Website:</li>
+              <li className="list-item">Website:</li> */}
             </ul>
             <div className="stars">
               <div className="star1">
