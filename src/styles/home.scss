@@ -348,6 +348,13 @@
           @media screen and (max-width: 1050px) {
             margin-right: 0px;
           }
+          @media screen and (max-width: 500px) {
+            margin-right: 0px;
+            padding-left: 0px;
+            text-align: center;
+            font-size: 15px;
+            width: 100%;
+          }
         }
         .submit-button {
           position: relative;
@@ -370,6 +377,9 @@
             width: 40%;
             top: 20px;
             border: 2px solid black;
+          }
+          @media screen and (max-width: 500px) {
+            width: 100%;
           }
         }
       }

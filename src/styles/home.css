@@ -559,6 +559,16 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .about-section .mailing-row .info-mail .subscribe-form .subscribe-email {
+    margin-right: 0px;
+    padding-left: 0px;
+    text-align: center;
+    font-size: 15px;
+    width: 100%;
+  }
+}
+
 .about-section .mailing-row .info-mail .subscribe-form .submit-button {
   position: relative;
   width: 20%;
@@ -585,6 +595,12 @@
     width: 40%;
     top: 20px;
     border: 2px solid black;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about-section .mailing-row .info-mail .subscribe-form .submit-button {
+    width: 100%;
   }
 }
 

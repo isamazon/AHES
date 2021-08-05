@@ -21,8 +21,8 @@ function Login() {
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
-    const secretUsername = "Admin";
-    const secretPassword = "Password";
+    const secretUsername = "ahesales1";
+    const secretPassword = "frank12345";
     const currentUsername = username.current.value;
     const currentPassword = password.current.value;
     if (
