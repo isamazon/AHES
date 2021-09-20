@@ -600,7 +600,7 @@
 
 @media screen and (max-width: 500px) {
   .about-section .mailing-row .info-mail .subscribe-form .submit-button {
-    width: 100%;
+    cxcwidth: 100%;
   }
 }
 

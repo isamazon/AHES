@@ -32,6 +32,7 @@ function Admin() {
       .then(fetchInitialText());
   };
 
+  // Login code
   const checkLoggedIn = () => {
     const loggedIn = localStorage.getItem("loggedIn");
 

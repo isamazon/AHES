@@ -106,10 +106,10 @@ app.put("/api/file", (req, res) => {
   if (is_(base64)) {
     fs.writeFile(directoryPath + newTitle, base64, "base64", (err) => {
       if (err) {
-        console.log("something went wrong lol oWo");
+        console.log("something went wrong");
         return res.json({ status: "failure... " });
       }
-      console.log("owo it is a base64");
+      console.log("it is a base64");
       res.json({ status: "success... " });
     });
   } else {

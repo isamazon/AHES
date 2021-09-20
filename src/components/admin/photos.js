@@ -10,11 +10,11 @@ import "../../styles/admin.css";
 function Photos() {
   const [files, setFiles] = useState([]);
 
-  const convertImages = (uwu) => {
-    console.log(uwu);
-    if (uwu.length > 0) {
+  const convertImages = (pics) => {
+    console.log(pics);
+    if (pics.length > 0) {
       let outputFiles = [...files];
-      uwu.forEach((item) => {
+      pics.forEach((item) => {
         const object = {
           title: item.name,
           base64: item.base64,
@@ -24,8 +24,8 @@ function Photos() {
       setFiles([...outputFiles]);
     } else {
       const object = {
-        title: uwu[0].title,
-        base64: uwu[0].base64,
+        title: pics[0].title,
+        base64: pics[0].base64,
       };
       setFiles([...files, object]);
     }

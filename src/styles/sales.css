@@ -71,7 +71,7 @@
   position: relative;
   top: 5%;
   height: 100px;
-  font-size: 60px;
+  font-size: 50px;
   width: 100%;
   text-align: center;
   color: black;
@@ -156,6 +156,12 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   overflow-y: scroll;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-height: 830px) {
@@ -166,9 +172,22 @@
 
 @media screen and (max-width: 1300px) {
   .gallery-cont .row-1 .photo-container {
-    height: 600px;
+    height: 500px;
     width: 100%;
     margin-top: 0px;
+  }
+}
+
+.gallery-cont .row-1 .photo-container .loading-h1 {
+  position: absolute;
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  font-size: 80px;
+}
+
+@media screen and (max-width: 1300px) {
+  .gallery-cont .row-1 .photo-container .loading-h1 {
+    font-family: 50px;
   }
 }
 
@@ -224,8 +243,15 @@
 
 .gallery-cont .row-1 .photomodal .exit-btn:hover {
   background: none;
-  color: black;
+  color: white;
   cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .gallery-cont .row-1 .photomodal .exit-btn {
+    right: 5%;
+    top: 18%;
+  }
 }
 
 .gallery-cont .row-1 .photomodal .enlarged-photo {
@@ -242,6 +268,13 @@
           transform: translate(-50%, -50%);
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+@media screen and (max-width: 900px) {
+  .gallery-cont .row-1 .photomodal .enlarged-photo {
+    height: 50%;
+    width: 90%;
+  }
 }
 
 @-webkit-keyframes fadeintoview {

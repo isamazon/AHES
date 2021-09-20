@@ -109,14 +109,14 @@ function Contact() {
                   placeholder="Email"
                   name="email"
                   className="name-input"
-                />
+                />f
               </div>
               <div className="name-inputs">
                 <textarea className="textbox" name="message" />
               </div>
               <input
                 type="submit"
-                value="Send message"
+                value="Send message"f
                 className="submit-message"
               />
             </form>
