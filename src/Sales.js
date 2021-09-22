@@ -16,14 +16,16 @@ function Sales(props) {
 
   const fetchData = () => {
     axios
-      .get('https://backend.shounenfit.com/api/description')
+      .get(
+        'https://ahesbackend.americanhouseholdestatesales.com/api/description'
+      )
       .then((data) => setValue(data.data));
   };
 
   const fetchPhotos = async () => {
     try {
       await axios
-        .get('https://backend.shounenfit.com/api/file')
+        .get('https://ahesbackend.americanhouseholdestatesales.com/api/file')
         .then((data) => {
           setPhotos(data.data);
         });
@@ -77,7 +79,7 @@ function Sales(props) {
                   </div>
                   <img
                     className="enlarged-photo"
-                    src={`https://backend.shounenfit.com/api/file/${clickedPhoto}`}
+                    src={`https://ahesbackend.americanhouseholdestatesales.com/api/file/${clickedPhoto}`}
                   />
                 </div>
               ) : (
@@ -91,7 +93,7 @@ function Sales(props) {
                     onClick={() => setClickedPhoto(x)}
                   >
                     <img
-                      src={`https://backend.shounenfit.com/api/file/${x}`}
+                      src={`https://ahesbackend.americanhouseholdestatesales.com/api/file/${x}`}
                       className="item-photos"
                       alt="photos"
                     />

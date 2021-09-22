@@ -1,43 +1,50 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import axios from "axios";
-import { FaArrowDown } from "react-icons/fa";
-import { useHistory, Link } from "react-router-dom";
+import React, { useState, useEffect, useRef } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import axios from 'axios';
+import { FaArrowDown } from 'react-icons/fa';
+import { useHistory, Link } from 'react-router-dom';
 
 // Components
-import Textbox from "./components/admin/textbox";
-import Nav from "./components/nav";
-import Photos from "./components/admin/photos";
-import Logout from "./components/admin/logout";
+import Textbox from './components/admin/textbox';
+import Nav from './components/nav';
+import Photos from './components/admin/photos';
+import Logout from './components/admin/logout';
 function Admin() {
-  const [textBoxValue, setTextBoxValue] = useState("");
+  const [textBoxValue, setTextBoxValue] = useState('');
   const currentTextValue = useRef(null);
   const history = useHistory();
 
   const fetchInitialText = () => {
-    axios.get("https://backend.shounenfit.com/api/description").then((data) => {
-      setTextBoxValue(data.data);
-      console.log(data);
-    });
+    axios
+      .get(
+        'https://ahesbackend.americanhouseholdestatesales.com/api/description'
+      )
+      .then((data) => {
+        setTextBoxValue(data.data);
+        console.log(data);
+      });
   };
 
   const handleSubmit = (e) => {
-    console.log("works");
+    console.log('works');
     e.preventDefault();
     const object = {
       description: currentTextValue.current.value,
     };
     axios
-      .put("https://backend.shounenfit.com/api/description", object)
+      .put(
+        'https://ahesbackend.americanhouseholdestatesales.com/api/description',
+        object
+      )
       .then(fetchInitialText());
   };
 
   // Login code
   const checkLoggedIn = () => {
-    const loggedIn = localStorage.getItem("loggedIn");
+    const loggedIn = localStorage.getItem('loggedIn');
 
     if (loggedIn === false || loggedIn === null) {
-      history.push("/login");
+      history.push('/login');
     }
   };
 

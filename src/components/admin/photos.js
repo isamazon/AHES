@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React, { useState } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 // import { useDropzone } from "react-dropzone";
-import FileBase64 from "react-file-base64";
-import axios from "axios";
+import FileBase64 from 'react-file-base64';
+import axios from 'axios';
 
 // CSS
-import "../../styles/admin.css";
+import '../../styles/admin.css';
 
 function Photos() {
   const [files, setFiles] = useState([]);
@@ -34,12 +34,15 @@ function Photos() {
   const handleSubmit = () => {
     if (files.length > 0) {
       files.forEach((item) => {
-        const base64Image = item.base64.split(",")[1];
+        const base64Image = item.base64.split(',')[1];
         const object = {
           title: item.title,
           base64: base64Image,
         };
-        axios.put("https://backend.shounenfit.com/api/file", object);
+        axios.put(
+          'https://ahesbackend.americanhouseholdestatesales.com/api/file',
+          object
+        );
       });
     } else {
       return null;
@@ -47,12 +50,16 @@ function Photos() {
   };
 
   const deleteAllPhotos = () => {
-    console.log("it works");
-    axios.get("https://backend.shounenfit.com/api/file").then((data) => {
-      data.data.forEach((item) => {
-        axios.delete(`https://backend.shounenfit.com/api/file/${item}`);
+    console.log('it works');
+    axios
+      .get('https://ahesbackend.americanhouseholdestatesales.com/api/file')
+      .then((data) => {
+        data.data.forEach((item) => {
+          axios.delete(
+            `https://ahesbackend.americanhouseholdestatesales.com/api/file/${item}`
+          );
+        });
       });
-    });
   };
 
   return (
@@ -70,7 +77,7 @@ function Photos() {
                 alt="image"
               />
             ))
-          : ""}
+          : ''}
       </div>
       <div className="button-container">
         <button onClick={() => handleSubmit()} className="button-post">
