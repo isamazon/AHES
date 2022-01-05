@@ -22,7 +22,7 @@ function Contact() {
   };
   function sendEmail(e) {
     e.preventDefault();
-
+    ToggleAlertBox(e);
     emailjs
       .sendForm(
         'service_l1qn4qb',
@@ -38,6 +38,7 @@ function Contact() {
           console.log(error.text);
         }
       );
+    e.target.reset();
   }
   useEffect(() => {
     AOS.init();
@@ -142,10 +143,8 @@ function Contact() {
               </div>
               <input
                 type="submit"
-                value="Send message"
-                f
+                value="Send Message"
                 className="submit-message"
-                onClick={ToggleAlertBox}
               />
             </form>
           </Col>
