@@ -1,19 +1,19 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import Infobox from "./infobox";
-import Subscribe from "./subscribe";
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Infobox from './infobox';
+import Subscribe from './subscribe';
 // images
-import money from "../assets/money2.png";
-import question from "../assets/question2.png";
-import help from "../assets/help2.png";
-import ad from "../assets/ad.jpg.png";
-import Letter from "./SVGS/letter";
-import Star from "./SVGS/star";
-import Redstar from "./SVGS/redstar";
-import Bluestar from "./SVGS/bluestar";
+import money from '../assets/money2.png';
+import question from '../assets/question2.png';
+import help from '../assets/help2.png';
+import ad from '../assets/ad.jpg.png';
+import Letter from './SVGS/letter';
+import Star from './SVGS/star';
+import Redstar from './SVGS/redstar';
+import Bluestar from './SVGS/bluestar';
 function Landing2(props) {
   return (
     <Container fluid className="about-section" id={props.scrollanchor}>
@@ -38,9 +38,7 @@ function Landing2(props) {
           img={help}
           animation="fade-up"
           title="We help"
-          infoText="American Household Estate Sales , a professional estate sale
-        company, serving Albuquerque, Rio Rancho, and surrounding area.
-        17+ years in business,"
+          infoText="We can help: Moving, downsizing, loved one pass, this time can be very stressful, we can help! From selling the contents of the home to selling the home as well, give us a call."
         />
         <Infobox
           img={ad}

@@ -1,9 +1,9 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import "../styles/home.css";
-import landingpage from "../assets/landingpage.png";
-import Aboutbtn from "./aboutbtn";
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import '../styles/home.css';
+import landingpage from '../assets/landingpage.png';
+import Aboutbtn from './aboutbtn';
 function Landingpage(props) {
   return (
     <Container fluid className="landing-page-cnt" id={props.topid}>

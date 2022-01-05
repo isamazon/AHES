@@ -14,15 +14,15 @@
     right: 0;
     height: 100%;
     width: 100%;
-    background: url("../assets/landingpagefinish1.png");
+    background: url('../assets/landingpagefinish1.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
     z-index: 1;
-    @media screen and (max-width: 1300px) {
-      background: url("../assets/landingpagemedium.png");
+    @media screen and (max-width: 1000px) {
+      background: url('../assets/landingpagemedium.png');
       background-position: bottom;
-      background-size: auto;
+      background-size: cover;
       background-repeat: no-repeat;
     }
   }
@@ -101,14 +101,13 @@
           padding: 0px 0px;
         }
         @media screen and (max-width: 450px) {
-          flex-direction: row;
+          flex-direction: column-reverse;
           justify-content: space-evenly;
-          top: 5%;
+          top: 10%;
         }
         .link-1 {
           position: relative;
           margin-right: 20px;
-
           animation: fade-up 2s;
           .button-1 {
             background: #d43a57;
@@ -132,7 +131,6 @@
           }
           .about-btn {
             position: relative;
-
             background: #0da0f2;
             transition: 0.5s;
             &:hover {
@@ -164,12 +162,12 @@
     left: 0%;
     height: 100%;
     width: 100%;
-    background: url("../assets/topwave.png");
+    background: url('../assets/topwave.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top;
     @media screen and (max-width: 1300px) {
-      background: url("../assets/topwavemedium.png");
+      background: url('../assets/topwavemedium.png');
       background-position: top;
       background-size: auto;
       background-repeat: no-repeat;
@@ -194,6 +192,7 @@
       @media screen and (max-width: 1300px) {
         margin-bottom: 200px;
       }
+
       .inner-col {
         position: relative;
         height: 450px;
@@ -207,6 +206,9 @@
         transition: 0.5s;
         @media screen and (max-width: 1300px) {
           box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.274);
+        }
+        @media screen and (max-width: 500px) {
+          height: 400px;
         }
         &:hover {
           box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.192);
@@ -235,6 +237,14 @@
           font-weight: 600;
           font-size: 20px;
           padding: 0px 10px;
+          @media screen and (max-width: 500px) {
+            font-size: 18px;
+            top: 35%;
+          }
+          @media screen and (max-width: 400px) {
+            font-size: 15px;
+            top: 35%;
+          }
         }
       }
     }
@@ -379,7 +389,7 @@
             border: 2px solid black;
           }
           @media screen and (max-width: 500px) {
-             cxcwidth: 100%;
+            cxcwidth: 100%;
           }
         }
       }

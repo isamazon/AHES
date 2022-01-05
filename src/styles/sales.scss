@@ -26,7 +26,7 @@ $font-1: 'Anton', sans-serif;
   .row-1 {
     position: relative;
     height: 100%;
-    width: 80%;
+    width: 100%;
     background: none;
     display: flex;
     flex-direction: column;
@@ -60,18 +60,16 @@ $font-1: 'Anton', sans-serif;
     }
     .description-p {
       position: relative;
-      width: 90%;
+      width: 60%;
       top: 0%;
       font-size: 20px;
-      padding: 50px;
-      padding-top: 0px;
+      padding: 0px 20px;
       height: 200px;
       overflow-y: auto;
       font-weight: 600;
       text-align: center;
       display: flex;
       align-items: center;
-      justify-content: center;
       background: rgba(255, 255, 255, 0.35);
       box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.404);
       backdrop-filter: blur(17px);
@@ -97,7 +95,7 @@ $font-1: 'Anton', sans-serif;
       top: 0%;
       padding: 50px 0px;
       height: 60%;
-      width: 100%;
+      width: 90%;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -113,22 +111,14 @@ $font-1: 'Anton', sans-serif;
         width: 100%;
         margin-top: 0px;
       }
-      .loading-h1 {
-        position: absolute;
-        text-align: center;
-        font-family: $font-1;
-        font-size: 80px;
-        @media screen and (max-width: 1300px) {
-          font-family: 50px;
-        }
-      }
+
       .item-photos {
         position: relative;
         height: 100%;
         width: 100%;
-        padding-bottom: 20px;
+        padding-bottom: 0px;
+        margin-bottom: 10px;
         border-radius: 10px;
-
         &:hover {
           cursor: pointer;
         }
@@ -145,8 +135,8 @@ $font-1: 'Anton', sans-serif;
       animation: fadeintoview 0.5s;
       .exit-btn {
         position: absolute;
-        top: 15%;
-        right: 15%;
+        top: 18%;
+        right: 19%;
         z-index: 500;
         color: white;
         height: 50px;
@@ -195,3 +185,15 @@ $font-1: 'Anton', sans-serif;
     opacity: 1;
   }
 }
+
+// {/* {loading ? (
+//   <img
+//     src={`https://ahesbackend.americanhouseholdestatesales.com/api/file/${x}`}
+//     className="item-photos"
+//     alt="photos"
+//   />
+// ) : (
+//   <div className="loading">
+//     <CircularProgress />
+//   </div>
+// )} */}
